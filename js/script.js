@@ -10,10 +10,50 @@ const {
 }
 
 AOS.init();
-let activePanelNavIndex = 0;
-let activePanelNavSuccess = true;
 
+
+const windowHeight = $(window).height()
+ScrollTrigger.create({
+    start: `top -${windowHeight - 50}`,
+    end: 99999,
+    toggleClass: {className: 'nav--fixed', targets: '.menu '},
+});
+
+
+//let activePanelNavIndex = 0;
+//let activePanelNavSuccess = true;
+
+
+
+//
+// const headerSliderArray = [
+//     'images/slider1.png',
+//     'images/slider2.png',
+//     'images/slider3.png',
+//     'images/slider4.png',
+//     'images/slider5.png',
+// ]
+//
+//
+//
 // $(window).on('load', function (){
+//     headerSliderArray.forEach((url) => {
+//         const img = new Image();
+//         img.src = url;
+//         img.onload = () => console.log('loaded')
+//     })
+//
+//
+//     const Planning = $('#planning .heading').offset().top;
+//     console.log(Planning)
+//     ScrollTrigger.create({
+//         start: `${Planning - 50}`,
+//         end: `${Planning + 200}`,
+//         toggleClass: {className: 'heading-open', targets: '.planning'},
+//     });
+//
+//
+//
 //     const YoulGet = $('#youll-get').offset().top;
 //     console.log(YoulGet, panelNav)
 //
@@ -66,13 +106,13 @@ let activePanelNavSuccess = true;
 //         }
 //     });
 // })
-
-const windowHeight = $(window).height()
-ScrollTrigger.create({
-    start: `top -${windowHeight - 50}`,
-    end: 99999,
-    toggleClass: {className: 'nav--fixed', targets: '.menu '},
-});
+//
+//
+// ScrollTrigger.create({
+//     start: 'top -50',
+//     end: 99999,
+//     toggleClass: {className: 'nav--fixed', targets: '.max-header'},
+// });
 //
 // ScrollTrigger.create({
 //     start: 'top -900',
@@ -90,10 +130,6 @@ ScrollTrigger.create({
 //     end: `${panelWidths}`,
 //     toggleClass: {className: 'nav-change', targets: '.max-header'}
 // });
-
-
-//... Select
-
 //
 // $('.js-example-basic-single').select2({
 //     minimumResultsForSearch: Infinity
@@ -104,9 +140,9 @@ ScrollTrigger.create({
 // const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
 // const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
 //
-
-
-/// Gallery
+//
+//
+// /// Gallery
 // gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 //
 // /* Main navigation */
@@ -114,11 +150,11 @@ ScrollTrigger.create({
 //   panelsContainer = document.querySelector("#panels-container"),
 //   tween;
 //
-
-
-/* Panels */
-
-
+//
+//
+// /* Panels */
+//
+//
 // const panels = gsap.utils.toArray("#panels-container .panel");
 // tween = gsap.to(panels, {
 //     xPercent: -100 * ( panels.length - 1 ),
@@ -137,67 +173,11 @@ ScrollTrigger.create({
 //     }
 // });
 //
-
-// gsap.to(".gallery2", {
-//     y: -100,
-//     x: -100,
-//     duration: 2,
-//     ease: "elastic",
-//     scrollTrigger: {
-//         trigger: ".gallery2",
-//         containerAnimation: tween,
-//         start: "left center",
-//         toggleActions: "play none none reset"
-//     }
-// });
-
-// gsap.to(".image-3-1", {
-//     y: -100,
-//     x: -100,
-//     duration: 2,
-//     ease: "elastic",
-//     scrollTrigger: {
-//         trigger: ".image-3-1",
-//         containerAnimation: tween,
-//         start: "left center",
-//         toggleActions: "play none none reset"
-//     }
-// });
-
-
-// let elements = gsap.utils.toArray(document.querySelectorAll(".panel h2"));
-// let scrollTriggerTimeline = gsap.timeline();
 //
-// console.log(elements)
 //
-// panels.forEach((panel, i) => {
-//     ScrollTrigger.create({
-//         trigger: panel,
-//         start: "top 50%",
 //
-//         onEnter: () => {
-//             // gsap
-//             //   .timeline()
-//             //   .set(button, { className: "button" }, "+=1")
-//             //   .set(button, { className: "button non-active" }, "+=1");
-//             console.log(panels[i])
-//         },
-//         onEnterBack: () => {
-//             // gsap
-//             //   .timeline()
-//             //   .set(button, { className: "button" }, "+=1")
-//             //   .set(button, { className: "button non-active" }, "+=1");
-//             // gsap.set(".nav__info button", { color: "#0a71e4", fontWeight: "normal" });
-//             // gsap.set(buttons[i], { color: "#FF4087", fontWeight: "bold" });
-//             console.log(panels[i])
-//         }
-//     });
-// });
-
-
-
-// ....... planning
-
+// // ....... planning
+//
 //
 // const btn_col = document.querySelector('#col-box1-btn')
 // const btn_buy = document.querySelector('#btn-buy')
@@ -225,29 +205,10 @@ ScrollTrigger.create({
 //     col_box2.classList.remove('active')
 // })
 //
-// const headerSliderArray = [
-//     'images/slider1.png',
-//     'https://picsum.photos/2440/1730?random=1',
-//     'https://picsum.photos/2440/1730?random=2',
-//     'https://picsum.photos/2440/1730?random=3',
-//     'https://picsum.photos/2440/1730?random=4',
-// ]
 //
-// let headerSliderArraySuccess = true;
 //
 //
 // switch_planning.addEventListener('change', (e)=>{
-//
-//     if(headerSliderArraySuccess){
-//         headerSliderArray.forEach((url) => {
-//             const img = new Image();
-//             img.src = url;
-//             img.onload = () => console.log('loaded')
-//         })
-//         headerSliderArraySuccess = false;
-//     }
-//
-//
 //     if(!e.currentTarget.checked){
 //         container1.classList.add('active')
 //         slider_planning.classList.remove('active')
@@ -293,10 +254,10 @@ ScrollTrigger.create({
 //         col_green2.classList.add('active')
 //     }
 // })
-
-// ......
-
-
+//
+// // ......
+//
+//
 //
 // const left_btn = document.querySelector('.left-btn')
 // const right_btn = document.querySelector('.right-btn')
@@ -334,29 +295,30 @@ ScrollTrigger.create({
 //
 // }
 //
-
-
-//......... Youll Get
-
-
-
-
+//
+//
+// //......... Youll Get
+//
+//
+//
+//
 //
 // const panelYoul = $('.panel-youl');
 // const panelNav = $('.section_nav a');
 // const youlTexts = $('.box-title .title1');
 //
 //
+//
 // panelNav.on('click', function (e){
 //     e.preventDefault();
 // })
-
-
-
-// ........ slick
-
+//
+//
+//
+// // ........ slick
+//
 // const allslicLengt = document.querySelectorAll('.slider .image')
-// const span_count = document.querySelector('.count-box samp')
+// const span_count = document.querySelector('.count samp')
 // span_count.innerText = `/ ${allslicLengt.length} `
 // let activeIndex = 1;
 //
@@ -369,9 +331,6 @@ ScrollTrigger.create({
 //     autoplay: true,
 //     autoplaySpeed: 2000,
 //     customPaging: function (slider, i) {
-//         //FYI just have a look at the object to find available information
-//         //press f12 to access the console in most browsers
-//         //you could also debug or look in the source
 //
 //         return  (i + 1) + '/' + slider.slideCount;
 //         // $('.slider-text .count span').text(`${activeIndex} `)
@@ -399,12 +358,10 @@ ScrollTrigger.create({
 //                 slidesToScroll: 1,
 //             }
 //         }
-//         // You can unslick at a given breakpoint now by adding:
-//         // settings: "unslick"
-//         // instead of a settings object
+//
 //     ]
 // }).on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
-//     //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+//
 //     if(!slick.$dots){
 //         return;
 //     }
