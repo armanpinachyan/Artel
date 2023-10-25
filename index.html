@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#FFF">
+  <meta name="msapplication-navbutton-color" content="#FFF">
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="#FFF">
+
+  <!--  SUPPORT FAVICON ALL TOUCH-->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="android-chrome-192x192.png">
+  <meta name="msapplication-config" content="browserconfig.xml"/>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/gsap.min.js"></script>
+  <script src="js/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/aos.css">
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>АРТЕЛЬ</title>
+</head>
+<body>
+<div class="overflow-hidden">
+
+
+  <section id="map" class="map">
+
+    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A751aa60586ceebae3653d96b47bd2c9c6862d3547a5af168b350385012c19ac1&amp;source=constructor"
+            width="100%" height="708" frameborder="0"></iframe>
+
+
+    <div class="container container-map">
+
+      <div class="wrapper">
+        <div class="box-image">
+          <img src="images/map-img.png" alt="img">
+          <div class="title ms-2">
+            <h4>Офис</h4>
+            <span class="ms-1">г. Ижевск, ул Кирова д.15</span>
+          </div>
+        </div>
+        <div class="time">
+          <a href="tel:+7 (912) 999-99-99" class="number">+7 (912) 999-99-99</a>
+          <span class="times mt-1">Пн-пт 10:00 - 20:00</span>
+          <a class="mail" href="#">sale@arteltopartel.ru</a>
+        </div>
+        <div class="button mt-3">
+          <button class="btn-green">
+            Записаться на консультацию
+            <img class="ms-1" src="images/phone.svg" alt="phone">
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <footer>
+
+    <div class="container container-footer">
+
+      <div class="inner-footer">
+
+        <span>© 2023 </span>
+
+        <p>
+          Упаковка и маркетинг
+          <a href="#">Kovalchuk</a>
+        </p>
+
+
+      </div>
+
+    </div>
+
+  </footer>
+</div>
+
+
+<!--<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">-->
+<!--  Launch demo modal-->
+<!--</button>-->
+
+
+<div class="modal modal-menu fade"  id="modal-menu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-menu">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">
+          <a href="tel:+7(912)999-99-99">+7 (912) 999-99-99</a>
+          <img class="ms-2" src="images/user.svg" alt="user">
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div id="links" class="links">
+          <a href="#home-lagom">О доме Лагом</a>
+          <a href="#panels">5 принципов </a>
+          <a href="#planning">Планировки</a>
+          <a href="#youll-get">Что вы получите</a>
+          <a href="#team">Команда</a>
+          <a href="#authorsProject">Франшиза</a>
+          <a href="#map">Контакты</a>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="mail">
+          sale@arteltopartel.ru
+        </a>
+        <div class="button">
+          <button class="btn-green">
+            Записаться на консультацию
+            <img class="ms-2" src="images/phone.svg" alt="phone">
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal modal-project fade"  id="modal-application" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-application">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel2">
+          Оставить заявку
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+         <p>
+            Оставьте свои данные, или задайте вопроси
+            мы с вами свяжемся в ближайшее время.
+         </p>
+        <div class="input-boxs">
+          <div class="input-box">
+            <input type="text" placeholder="Имя*">
+          </div>
+          <div class="input-box">
+            <input type="number" placeholder="Телефон*">
+          </div>
+          <div class="input-box">
+            <textarea placeholder="Сообщение"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <div class="button">
+          <button class="btn-green">
+            Отправить
+          </button>
+        </div>
+        <p>
+          Нажимая на кнопку, вы принимаете
+          политику конфиденциальности и даете согласие
+          на обработку персональных данных.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<script src="js/fastfront.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,466 @@
+@import "helper";
+@import "../font/fonts.css";
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  border-radius: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ffff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: #303030;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #595959;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "RF Dewi Extended", serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media (max-width: 1024px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 992px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+$c-black: #303030;
+
+.container {
+  max-width: 1360px;
+  width: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+
+.btn-green {
+  border-radius: 100px;
+  background: #50BA1E;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+  padding: 11px 24px;
+}
+
+.btn-white {
+  border-radius: 100px;
+  background: #FFF;
+  color: #303030;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+}
+
+$transMenu: 0.5s;
+
+
+.heading {
+  color: #303030;
+  font-size: 13.5rem;
+  line-height: 100%;
+  font-weight: 600;
+  letter-spacing: -0.81rem;
+  text-transform: capitalize;
+  @media (max-width: 1200px) {
+    font-size: 11rem !important;
+  }
+  @media (max-width: 992px) {
+    font-size: 10rem !important;
+  }
+  @media (max-width: 768px) {
+    font-size: 8rem !important;
+  }
+  @media (max-width: 576px) {
+    font-size: 6.2rem !important;
+    letter-spacing: -0.5rem;
+  }
+  @media (max-width: 475px) {
+    font-size: 5rem !important;
+    letter-spacing: -0.3rem;
+  }
+  @media (max-width: 420px) {
+    font-size: 4.6rem !important;
+    letter-spacing: -0.3rem;
+  }
+  @media (max-width: 375px) {
+    font-size: 3.8rem !important;
+    letter-spacing: -0.4rem;
+  }
+}
+
+
+//........ Modal
+
+.modal-dialog {
+  position: absolute;
+  right: 0;
+
+  .modal-content {
+    border: 0;
+    border-radius: 0;
+    height: 100vh;
+    @media (max-width: 576px) {
+      height: auto;
+    }
+  }
+}
+
+.modal-menu {
+
+  .modal-dialog-menu {
+    margin: 0;
+    height: 100vh;
+
+    .modal-content {
+      padding: 24px 24px 30px 24px;
+      @media (max-width: 576px) {
+        height: 100vh;
+      }
+      .modal-header {
+        border: 0;
+
+        h5 {
+          a {
+            color: #303030;
+            font-size: 14px;
+            font-weight: 700;
+          }
+
+          i {
+            font-size: 14px;
+            color: #303030;
+          }
+        }
+
+        .btn-close {
+          border-radius: 100px;
+          border: 1px solid rgba(48, 48, 48, 0.20);
+          padding: 12px;
+        }
+      }
+
+      .modal-body {
+        .links {
+          a {
+            display: block;
+            margin-bottom: 12px;
+            color: rgba(48, 48, 48, 0.60);
+            font-size: 24px;
+            font-weight: 700;
+            transition: .2s;
+
+            &:hover {
+              color: #303030;
+            }
+          }
+        }
+      }
+
+      .modal-footer {
+        justify-content: start;
+        border: 0;
+
+        .mail {
+          display: block;
+          color: #303030;
+          font-size: 0.875rem;
+          font-weight: 600;
+          line-height: 16px; /* 114.286% */
+        }
+
+        .button {
+          width: 100%;
+          margin-top: 40px;
+
+          button {
+            width: 100%;
+            padding: 13px 24px;
+            @media (max-width: 475px) {
+              font-size: 13px;
+              white-space: nowrap;
+            }
+          }
+        }
+      }
+
+    }
+
+  }
+
+
+}
+
+.modal-project {
+
+  .modal-dialog-application {
+    margin: 0;
+    height: 100%;
+
+    .modal-content {
+      padding: 24px 24px 30px 24px;
+
+      .modal-header {
+        border: 0;
+
+        h5 {
+          color: #303030;
+          font-size: 1.5rem;
+          font-weight: 700;
+          line-height: 100%; /* 24px */
+        }
+
+        .btn-close {
+          border-radius: 100px;
+          border: 1px solid rgba(48, 48, 48, 0.20);
+          padding: 12px;
+        }
+      }
+
+      .modal-body {
+        p {
+          color: rgba(48, 48, 48, 0.60);
+          font-size: 0.75rem;
+          font-weight: 400;
+          line-height: 16px;
+          max-width: 341px;
+          width: 100%;
+        }
+
+        .input-boxs {
+          margin-top: 54px;
+
+          .input-box {
+            width: 100%;
+            margin-bottom: 16px;
+
+            input {
+              width: 100%;
+              padding: 15px 16px 16px 16px;
+              color: #303030;
+              font-size: 14px;
+              font-weight: 600;
+              letter-spacing: -0.42px;
+              border-radius: 8px;
+              background: var(--base-50, rgba(236, 239, 243, 0.50));
+
+              ::placeholder {
+                color: #A1A6AF;
+                font-size: 14px;
+              }
+            }
+
+            textarea {
+              width: 100%;
+              padding: 15px 16px 16px 16px;
+              color: #303030;
+              font-size: 14px;
+              font-weight: 600;
+              letter-spacing: -0.42px;
+              border-radius: 8px;
+              background: var(--base-50, rgba(236, 239, 243, 0.50));
+              resize: none;
+              height: 130px;
+
+              ::placeholder {
+                color: #A1A6AF;
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+
+      .modal-footer {
+        justify-content: start;
+        border: 0;
+
+        .button {
+          width: 100%;
+          margin-top: 40px;
+
+          button {
+            width: 100%;
+            padding: 13px 24px;
+          }
+        }
+
+        p {
+          color: rgba(48, 48, 48, 0.40);
+          font-size: 0.75rem;
+          font-weight: 400;
+          line-height: 16px; /* 133.333% */
+        }
+      }
+
+    }
+
+  }
+
+
+}
+
+
+
+
+//... Modal- end
+
+// Max Header
+
+
+
+//.. Max header
+
+
+///...... .MAp
+
+.map {
+  min-height: 80vh;
+  position: relative;
+  margin-top: 6.875rem;
+  @media (max-width: 768px) {
+    margin-top: 4rem;
+    min-height: 70vh;
+  }
+
+  iframe {
+    opacity: .6;
+  }
+
+  .container-map {
+    position: absolute;
+    z-index: 5;
+    left: 0;
+    top: 0;
+
+    .wrapper {
+      max-width: 360px;
+      width: 100%;
+      padding: 1.5rem;
+      background: #fff;
+      position: absolute;
+      left: 8.125rem;
+      top: 40px;
+      z-index: 7;
+      @media (max-width: 576px) {
+        left: 5rem;
+      }
+      @media (max-width: 475px) {
+        left: 1rem;
+      }
+      @media (max-width: 375px) {
+        left: -1rem;
+      }
+
+      .box-image {
+        display: flex;
+        align-items: center;
+
+        .title {
+          h4 {
+            color: #303030;
+            font-size: 0.875rem;
+            font-weight: 600;
+            line-height: 1rem; /* 114.286% */
+          }
+
+          span {
+            color: rgba(48, 48, 48, 0.60);
+            font-size: 0.875rem;
+            font-weight: 400;
+            line-height: 1rem; /* 114.286% */
+          }
+
+        }
+
+      }
+
+      .time {
+        margin-top: 1.5rem;
+
+        .number {
+          color: #50BA1E;
+          font-feature-settings: 'salt' on;
+          font-size: 0.875rem;
+          font-weight: 600;
+          line-height: 16px; /* 114.286% */
+          display: block;
+          cursor: pointer;
+        }
+
+        .times {
+          color: #303030;
+          font-feature-settings: 'salt' on;
+          font-size: 0.875rem;
+          font-weight: 600;
+          line-height: 16px;
+          display: block;
+          margin-bottom: 24px;
+        }
+
+        .mail {
+          color: #303030;
+          font-size: 0.875rem;
+          font-weight: 600;
+          line-height: 16px; /* 114.286% */
+          display: block;
+
+        }
+
+      }
+
+      .button {
+        .btn-green {
+          padding: 13px 24px;
+          white-space: nowrap;
+        }
+      }
+
+
+    }
+
+
+  }
+
+
+}
+
+
+//........... Map End
+

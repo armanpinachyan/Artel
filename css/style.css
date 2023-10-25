@@ -1,0 +1,390 @@
+@import "../font/fonts.css";
+::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  border-radius: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: #303030;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #595959;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "RF Dewi Extended", serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media (max-width: 1024px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media (max-width: 992px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 13px;
+  }
+}
+.container {
+  max-width: 1360px;
+  width: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.btn-green {
+  border-radius: 100px;
+  background: #50BA1E;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+  padding: 11px 24px;
+}
+
+.btn-white {
+  border-radius: 100px;
+  background: #FFF;
+  color: #303030;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+}
+
+.heading {
+  color: #303030;
+  font-size: 13.5rem;
+  line-height: 100%;
+  font-weight: 600;
+  letter-spacing: -0.81rem;
+  text-transform: capitalize;
+}
+@media (max-width: 1200px) {
+  .heading {
+    font-size: 11rem !important;
+  }
+}
+@media (max-width: 992px) {
+  .heading {
+    font-size: 10rem !important;
+  }
+}
+@media (max-width: 768px) {
+  .heading {
+    font-size: 8rem !important;
+  }
+}
+@media (max-width: 576px) {
+  .heading {
+    font-size: 6.2rem !important;
+    letter-spacing: -0.5rem;
+  }
+}
+@media (max-width: 475px) {
+  .heading {
+    font-size: 5rem !important;
+    letter-spacing: -0.3rem;
+  }
+}
+@media (max-width: 420px) {
+  .heading {
+    font-size: 4.6rem !important;
+    letter-spacing: -0.3rem;
+  }
+}
+@media (max-width: 375px) {
+  .heading {
+    font-size: 3.8rem !important;
+    letter-spacing: -0.4rem;
+  }
+}
+
+.modal-dialog {
+  position: absolute;
+  right: 0;
+}
+.modal-dialog .modal-content {
+  border: 0;
+  border-radius: 0;
+  height: 100vh;
+}
+@media (max-width: 576px) {
+  .modal-dialog .modal-content {
+    height: auto;
+  }
+}
+
+.modal-menu .modal-dialog-menu {
+  margin: 0;
+  height: 100vh;
+}
+.modal-menu .modal-dialog-menu .modal-content {
+  padding: 24px 24px 30px 24px;
+}
+@media (max-width: 576px) {
+  .modal-menu .modal-dialog-menu .modal-content {
+    height: 100vh;
+  }
+}
+.modal-menu .modal-dialog-menu .modal-content .modal-header {
+  border: 0;
+}
+.modal-menu .modal-dialog-menu .modal-content .modal-header h5 a {
+  color: #303030;
+  font-size: 14px;
+  font-weight: 700;
+}
+.modal-menu .modal-dialog-menu .modal-content .modal-header h5 i {
+  font-size: 14px;
+  color: #303030;
+}
+.modal-menu .modal-dialog-menu .modal-content .modal-header .btn-close {
+  border-radius: 100px;
+  border: 1px solid rgba(48, 48, 48, 0.2);
+  padding: 12px;
+}
+.modal-menu .modal-dialog-menu .modal-content .modal-body .links a {
+  display: block;
+  margin-bottom: 12px;
+  color: rgba(48, 48, 48, 0.6);
+  font-size: 24px;
+  font-weight: 700;
+  transition: 0.2s;
+}
+.modal-menu .modal-dialog-menu .modal-content .modal-body .links a:hover {
+  color: #303030;
+}
+.modal-menu .modal-dialog-menu .modal-content .modal-footer {
+  justify-content: start;
+  border: 0;
+}
+.modal-menu .modal-dialog-menu .modal-content .modal-footer .mail {
+  display: block;
+  color: #303030;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 16px; /* 114.286% */
+}
+.modal-menu .modal-dialog-menu .modal-content .modal-footer .button {
+  width: 100%;
+  margin-top: 40px;
+}
+.modal-menu .modal-dialog-menu .modal-content .modal-footer .button button {
+  width: 100%;
+  padding: 13px 24px;
+}
+@media (max-width: 475px) {
+  .modal-menu .modal-dialog-menu .modal-content .modal-footer .button button {
+    font-size: 13px;
+    white-space: nowrap;
+  }
+}
+
+.modal-project .modal-dialog-application {
+  margin: 0;
+  height: 100%;
+}
+.modal-project .modal-dialog-application .modal-content {
+  padding: 24px 24px 30px 24px;
+}
+.modal-project .modal-dialog-application .modal-content .modal-header {
+  border: 0;
+}
+.modal-project .modal-dialog-application .modal-content .modal-header h5 {
+  color: #303030;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 100%; /* 24px */
+}
+.modal-project .modal-dialog-application .modal-content .modal-header .btn-close {
+  border-radius: 100px;
+  border: 1px solid rgba(48, 48, 48, 0.2);
+  padding: 12px;
+}
+.modal-project .modal-dialog-application .modal-content .modal-body p {
+  color: rgba(48, 48, 48, 0.6);
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 16px;
+  max-width: 341px;
+  width: 100%;
+}
+.modal-project .modal-dialog-application .modal-content .modal-body .input-boxs {
+  margin-top: 54px;
+}
+.modal-project .modal-dialog-application .modal-content .modal-body .input-boxs .input-box {
+  width: 100%;
+  margin-bottom: 16px;
+}
+.modal-project .modal-dialog-application .modal-content .modal-body .input-boxs .input-box input {
+  width: 100%;
+  padding: 15px 16px 16px 16px;
+  color: #303030;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.42px;
+  border-radius: 8px;
+  background: var(--base-50, rgba(236, 239, 243, 0.5));
+}
+.modal-project .modal-dialog-application .modal-content .modal-body .input-boxs .input-box input ::placeholder {
+  color: #A1A6AF;
+  font-size: 14px;
+}
+.modal-project .modal-dialog-application .modal-content .modal-body .input-boxs .input-box textarea {
+  width: 100%;
+  padding: 15px 16px 16px 16px;
+  color: #303030;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.42px;
+  border-radius: 8px;
+  background: var(--base-50, rgba(236, 239, 243, 0.5));
+  resize: none;
+  height: 130px;
+}
+.modal-project .modal-dialog-application .modal-content .modal-body .input-boxs .input-box textarea ::placeholder {
+  color: #A1A6AF;
+  font-size: 14px;
+}
+.modal-project .modal-dialog-application .modal-content .modal-footer {
+  justify-content: start;
+  border: 0;
+}
+.modal-project .modal-dialog-application .modal-content .modal-footer .button {
+  width: 100%;
+  margin-top: 40px;
+}
+.modal-project .modal-dialog-application .modal-content .modal-footer .button button {
+  width: 100%;
+  padding: 13px 24px;
+}
+.modal-project .modal-dialog-application .modal-content .modal-footer p {
+  color: rgba(48, 48, 48, 0.4);
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 16px; /* 133.333% */
+}
+
+.map {
+  min-height: 80vh;
+  position: relative;
+  margin-top: 6.875rem;
+}
+@media (max-width: 768px) {
+  .map {
+    margin-top: 4rem;
+    min-height: 70vh;
+  }
+}
+.map iframe {
+  opacity: 0.6;
+}
+.map .container-map {
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  top: 0;
+}
+.map .container-map .wrapper {
+  max-width: 360px;
+  width: 100%;
+  padding: 1.5rem;
+  background: #fff;
+  position: absolute;
+  left: 8.125rem;
+  top: 40px;
+  z-index: 7;
+}
+@media (max-width: 576px) {
+  .map .container-map .wrapper {
+    left: 5rem;
+  }
+}
+@media (max-width: 475px) {
+  .map .container-map .wrapper {
+    left: 1rem;
+  }
+}
+@media (max-width: 375px) {
+  .map .container-map .wrapper {
+    left: -1rem;
+  }
+}
+.map .container-map .wrapper .box-image {
+  display: flex;
+  align-items: center;
+}
+.map .container-map .wrapper .box-image .title h4 {
+  color: #303030;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1rem; /* 114.286% */
+}
+.map .container-map .wrapper .box-image .title span {
+  color: rgba(48, 48, 48, 0.6);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1rem; /* 114.286% */
+}
+.map .container-map .wrapper .time {
+  margin-top: 1.5rem;
+}
+.map .container-map .wrapper .time .number {
+  color: #50BA1E;
+  font-feature-settings: "salt" on;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 16px; /* 114.286% */
+  display: block;
+  cursor: pointer;
+}
+.map .container-map .wrapper .time .times {
+  color: #303030;
+  font-feature-settings: "salt" on;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 16px;
+  display: block;
+  margin-bottom: 24px;
+}
+.map .container-map .wrapper .time .mail {
+  color: #303030;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 16px; /* 114.286% */
+  display: block;
+}
+.map .container-map .wrapper .button .btn-green {
+  padding: 13px 24px;
+  white-space: nowrap;
+}
+
+/*# sourceMappingURL=style.css.map */
