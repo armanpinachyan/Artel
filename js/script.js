@@ -67,12 +67,12 @@ let activePanelNavSuccess = true;
 //     });
 // })
 
-
-// ScrollTrigger.create({
-//     start: 'top -50',
-//     end: 99999,
-//     toggleClass: {className: 'nav--fixed', targets: '.max-header'},
-// });
+const windowHeight = $(window).height()
+ScrollTrigger.create({
+    start: `top -${windowHeight - 50}`,
+    end: 99999,
+    toggleClass: {className: 'nav--fixed', targets: '.menu '},
+});
 //
 // ScrollTrigger.create({
 //     start: 'top -900',
