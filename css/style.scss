@@ -397,16 +397,26 @@ $transMenu: 0.5s;
   height: 64px;
   z-index: 1000;
   &-inner{
-    padding-top: 2.1875rem;
-    transition: .3s;
+    transform: translateY(0);
+    padding-top: 0;
+    transition: 0.3s;
     display: flex;
     justify-content: space-between;
-    align-items: start;
-
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 20px;
+    width: 100%;
+    height: 64px;
     &-box{
       display: flex;
+      height: 64px;
       .logo{
         margin-right: 2.5rem;
+        .logo1{
+          position: relative;
+          top: 28px;
+        }
         .logo2{
           display: none;
         }
@@ -443,14 +453,18 @@ $transMenu: 0.5s;
     }
 
   }
+  &-inner2{
+    position: absolute;
+   transform: translateY(-200px);
+    transition: .3s;
+    width: 100%;
+    left: 0;
+    top: 20px;
+  }
   &.nav--fixed{
-    height: 64px;
     background: #fff;
-    display: flex;
-    align-items: center;
     .menu-inner{
-      padding-top: 0;
-      align-items: center;
+      top: 0;
       &-box{
         align-items: center;
         .logo{
@@ -490,6 +504,29 @@ $transMenu: 0.5s;
     }
 
   }
+  &.nav-works{
+    height: 80px;
+    .menu-inner{
+      transform: translateY(-200px);
+    }
+    .menu-inner2{
+      transform: translateY(0);
+      .btn-inner2{
+        border: 1px solid rgba(70, 68, 65, 0.40);
+        backdrop-filter: blur(12px);
+      }
+      .texts{
+        span{
+          color: rgba(70, 68, 65, 0.60);
+          font-size: 12px;
+          font-style: italic;
+          font-weight: 400;
+          line-height: 18px; /* 150% */
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
 }
 
 //.. Menu
@@ -528,7 +565,7 @@ $transMenu: 0.5s;
           border-radius: 4px;
           background: rgba(255, 255, 255, 0.16);
           backdrop-filter: blur(10px);
-          padding: 5px 8px;
+          padding: 5px 8px 3px 8px;
           color: #FFF;
           font-size: 12px;
           font-weight: 500;
@@ -694,7 +731,27 @@ $transMenu: 0.5s;
 }
 
 
-//........ Your-dream
+//........ Your-dream End
+
+//...... Works
+
+.works{
+
+  &-heading{
+    color: #464441;
+    font-size: 4.5rem;
+    font-weight: 600;
+    line-height: 100%;
+    text-transform: uppercase;
+    margin-bottom: 11.5rem ;
+    span{
+      color: rgba(70, 68, 65, 0.16);
+    }
+  }
+
+}
+
+//..... Works End
 
 
 //․․․․․․․․ Services
@@ -802,7 +859,6 @@ $transMenu: 0.5s;
 }
 
 
-
 //....... Services End
 
 
@@ -902,7 +958,7 @@ $transMenu: 0.5s;
 
 
 
-///...... .
+///...... . Map
 
 .map {
 min-height: 80vh;
@@ -1009,6 +1065,14 @@ position: absolute;
             align-items: center;
             cursor: pointer;
           }
+          .text{
+            h4{
+              color: #FFF;
+            }
+            span{
+              color: rgba(255, 255, 255, 0.48);
+            }
+          }
         }
         .logo{
           position: absolute;
@@ -1048,6 +1112,7 @@ position: absolute;
 //........... Map End
 
 
+//... accordion btn
 
 $btn-round-size:40px;
 $btn-round-rotate:135deg;

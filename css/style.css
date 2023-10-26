@@ -342,17 +342,28 @@ body {
   z-index: 1000;
 }
 .menu-inner {
-  padding-top: 2.1875rem;
+  transform: translateY(0);
+  padding-top: 0;
   transition: 0.3s;
   display: flex;
   justify-content: space-between;
-  align-items: start;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 20px;
+  width: 100%;
+  height: 64px;
 }
 .menu-inner-box {
   display: flex;
+  height: 64px;
 }
 .menu-inner-box .logo {
   margin-right: 2.5rem;
+}
+.menu-inner-box .logo .logo1 {
+  position: relative;
+  top: 28px;
 }
 .menu-inner-box .logo .logo2 {
   display: none;
@@ -384,15 +395,19 @@ body {
 .menu-inner-box .btn-menu {
   transition: 0.3s;
 }
+.menu-inner2 {
+  position: absolute;
+  transform: translateY(-200px);
+  transition: 0.3s;
+  width: 100%;
+  left: 0;
+  top: 20px;
+}
 .menu.nav--fixed {
-  height: 64px;
   background: #fff;
-  display: flex;
-  align-items: center;
 }
 .menu.nav--fixed .menu-inner {
-  padding-top: 0;
-  align-items: center;
+  top: 0;
 }
 .menu.nav--fixed .menu-inner-box {
   align-items: center;
@@ -421,6 +436,27 @@ body {
 }
 .menu.nav--fixed .menu-inner-box .btn-menu .btn-menu-solid rect {
   fill: #fff;
+}
+.menu.nav-works {
+  height: 80px;
+}
+.menu.nav-works .menu-inner {
+  transform: translateY(-200px);
+}
+.menu.nav-works .menu-inner2 {
+  transform: translateY(0);
+}
+.menu.nav-works .menu-inner2 .btn-inner2 {
+  border: 1px solid rgba(70, 68, 65, 0.4);
+  backdrop-filter: blur(12px);
+}
+.menu.nav-works .menu-inner2 .texts span {
+  color: rgba(70, 68, 65, 0.6);
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 18px; /* 150% */
+  text-transform: uppercase;
 }
 
 .header {
@@ -457,7 +493,7 @@ body {
   border-radius: 4px;
   background: rgba(255, 255, 255, 0.16);
   backdrop-filter: blur(10px);
-  padding: 5px 8px;
+  padding: 5px 8px 3px 8px;
   color: #FFF;
   font-size: 12px;
   font-weight: 500;
@@ -604,6 +640,18 @@ body {
   font-weight: 400;
   line-height: 18px; /* 128.571% */
   text-transform: uppercase;
+}
+
+.works-heading {
+  color: #464441;
+  font-size: 4.5rem;
+  font-weight: 600;
+  line-height: 100%;
+  text-transform: uppercase;
+  margin-bottom: 11.5rem;
+}
+.works-heading span {
+  color: rgba(70, 68, 65, 0.16);
 }
 
 .services {
@@ -875,6 +923,12 @@ body {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+}
+.map .container-map .wrapper .box-item:nth-of-type(2) .text h4 {
+  color: #FFF;
+}
+.map .container-map .wrapper .box-item:nth-of-type(2) .text span {
+  color: rgba(255, 255, 255, 0.48);
 }
 .map .container-map .wrapper .box-item .logo {
   position: absolute;

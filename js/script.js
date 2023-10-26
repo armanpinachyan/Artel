@@ -13,16 +13,27 @@ AOS.init();
 
 
 const windowHeight = $(window).height()
+
+
 ScrollTrigger.create({
     start: `top -${windowHeight - 50}`,
     end: 99999,
     toggleClass: {className: 'nav--fixed', targets: '.menu '},
 });
 
+$(window).on('load', function (){
+    const Works = $('#works').offset().top;
+    console.log(Works)
+    ScrollTrigger.create({
+        start: `top -${Works}`,
+        end: 8000,
+        toggleClass: {className: 'nav-works', targets: '.menu '},
+    });
+
+})
+
 
 //. ...Accordion btn
-
-
 
 
 $('.accordion-header').on('click', function (){
