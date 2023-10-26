@@ -20,6 +20,33 @@ ScrollTrigger.create({
 });
 
 
+//. ...Accordion btn
+
+
+
+
+$('.accordion-header').on('click', function (){
+    // $(".btn-round").click({animateIn: "closeButton", animateOut: "plusButton"}, animate_function);
+    const btnRound = $(this).find('.btn-round');
+    if(btnRound.hasClass(active)){
+        btnRound.removeClass(active)
+    } else {
+        btnRound.addClass(active)
+    }
+
+})
+
+// function animate_function(event){
+//     if( $(this).hasClass(event.data.animateIn) ) {
+//         $(this).removeClass(event.data.animateIn).addClass(event.data.animateOut);
+//     }
+//     else if( $(this).hasClass(event.data.animateOut) ) {
+//         $(this).removeClass(event.data.animateOut).addClass(event.data.animateIn);
+//     }
+//     else {
+//         $(this).addClass('animated ' + event.data.animateIn);
+//     }
+// }
 //let activePanelNavIndex = 0;
 //let activePanelNavSuccess = true;
 
