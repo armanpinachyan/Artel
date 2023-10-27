@@ -736,11 +736,8 @@ $transMenu: 0.5s;
 //...... Works
 
 .works-box{
-  display: flex;
-  justify-content: start;
-  align-items: start;
   .our-work{
-    width: calc(100vw - 400px);
+    min-width: calc(100vw - 650px);
     &-inner{
       display: flex;
       justify-content: center;
@@ -775,7 +772,7 @@ $transMenu: 0.5s;
   }
 
   .works{
-    width: 100vw;
+    min-width: 100vw;
     &-heading{
       color: #464441;
       font-size: 4.5rem;
@@ -784,7 +781,7 @@ $transMenu: 0.5s;
       text-transform: uppercase;
       margin-bottom: 11.5rem ;
       opacity: 0;
-      span{
+       span{
         color: rgba(70, 68, 65, 0.16);
       }
     }

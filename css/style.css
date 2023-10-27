@@ -642,13 +642,8 @@ body {
   text-transform: uppercase;
 }
 
-.works-box {
-  display: flex;
-  justify-content: start;
-  align-items: start;
-}
 .works-box .our-work {
-  width: calc(100vw - 400px);
+  min-width: calc(100vw - 650px);
 }
 .works-box .our-work-inner {
   display: flex;
@@ -677,7 +672,7 @@ body {
   text-transform: uppercase;
 }
 .works-box .works {
-  width: 100vw;
+  min-width: 100vw;
 }
 .works-box .works-heading {
   color: #464441;
