@@ -642,16 +642,106 @@ body {
   text-transform: uppercase;
 }
 
-.works-heading {
+.works-box {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+}
+.works-box .our-work {
+  width: calc(100vw - 400px);
+}
+.works-box .our-work-inner {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+}
+.works-box .our-work-head-box-head1 {
+  color: rgba(70, 68, 65, 0.16);
+}
+.works-box .our-work-head-box-head2 {
+  color: #464441;
+}
+.works-box .our-work-texts {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-top: 11rem;
+}
+.works-box .our-work-texts span {
+  color: rgba(70, 68, 65, 0.6);
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+.works-box .works {
+  width: 100vw;
+}
+.works-box .works-heading {
   color: #464441;
   font-size: 4.5rem;
   font-weight: 600;
   line-height: 100%;
   text-transform: uppercase;
   margin-bottom: 11.5rem;
+  opacity: 0;
 }
-.works-heading span {
+.works-box .works-heading span {
   color: rgba(70, 68, 65, 0.16);
+}
+.works-box .works-heading2 {
+  margin: 10rem 0;
+}
+.works-box .works-col-box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.works-box .works-col-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.works-box .works-col-box-text {
+  position: absolute;
+  top: -157px;
+}
+.works-box .works-col-box-text p {
+  max-width: 280px;
+  width: 100%;
+  color: #464441;
+  text-align: right;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.375rem; /* 137.5% */
+}
+.works-box .works-col-box .plus {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #5E7FF4;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+.works-box .works-col-box .plus img {
+  width: 24px;
+  height: 24px;
+}
+.works-box .works-image-full {
+  min-height: 80vh;
+}
+.works-box .works-image-full img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .services {
