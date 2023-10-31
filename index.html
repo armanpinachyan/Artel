@@ -108,7 +108,9 @@
 
     <header class="header" id="header">
 
-
+      <div class="header-image">
+        <img src="images/header-bg.png"  alt="haeder">
+      </div>
 
        <div class="header-info">
          <div class="container">
@@ -153,16 +155,13 @@
          </div>
        </div>
 
-
-
-
     </header>
 
     <section id="your-dream" class="your-dream">
 
       <div class="container">
 
-        <div class="your-dream-inner-top">
+        <div class="your-dream-inner-top" data-aos="fade-down" data-aos-duration="1000">
 
           <div class="your-dream-inner-top-box">
             <p>
@@ -195,7 +194,7 @@
 
         </div>
 
-        <div class="your-dream-inner-bottom">
+        <div class="your-dream-inner-bottom" data-aos="fade-up" data-aos-duration="1000" >
 
           <div class="your-dream-inner-bottom-box">
 
@@ -284,9 +283,11 @@
                   </div>
                   <div class="col-12 h-504">
                     <div class="works-col-box">
+                        <div style="background: transparent" data-bs-toggle="modal" data-bs-target="#modal-slider">
                       <div class="plus">
-                        <img src="images/plus.svg" alt="plus">
+                          <img src="images/plus.svg" alt="plus">
                       </div>
+                        </div>
                       <img src="images/home.jpg" alt="home">
                     </div>
                   </div>
@@ -351,8 +352,10 @@
                   </div>
                   <div class="col-12 h-504">
                     <div class="works-col-box">
+                        <div style="background: transparent" data-bs-toggle="modal" data-bs-target="#modal-slider">
                       <div class="plus">
-                        <img src="images/plus.svg" alt="plus">
+                          <img src="images/plus.svg" alt="plus">
+                        </div>
                       </div>
                       <img src="images/home6.png" alt="home">
                     </div>
@@ -612,7 +615,7 @@
 
     <div class="container">
 
-      <div class="engaged-business-inner-top">
+      <div class="engaged-business-inner-top" data-aos="fade-down" data-aos-duration="1000">
 
         <div class="engaged-business-inner-top-box">
           <p>
@@ -637,7 +640,7 @@
 
       </div>
 
-      <div class="engaged-business-inner-bottom">
+      <div class="engaged-business-inner-bottom" data-aos="fade-up" data-aos-duration="1000">
 
         <div class="engaged-business-inner-bottom-box">
 
@@ -741,6 +744,71 @@
         </div>
 
 
+      </div>
+
+    </section>
+
+    <section id="team" class="team">
+
+      <div id="panels-container" style="width: 200%;">
+        <article id="panel-1" class="panel full-screen ">
+          <div class="team-image image-left">
+            <img class="img1" src="images/img-left.png" alt="left">
+            <img class="img2" src="images/img-lef2.png" alt="left">
+          </div>
+          <div class="team-image image-right">
+            <img class="img" src="images/image-rigth.png" alt="right">
+          </div>
+          <div class="team-image image-left-bottom">
+            <img class="img" src="images/image-left-bottom.png" alt="left">
+          </div>
+          <div class="team-image image-right-bottom">
+            <img class="img" src="images/img-rigth-bottom.png" alt="left">
+            <div class="position-relative">
+              <div class="title">благодаря работе с нами
+                вы получите то, что хотите
+              </div>
+              <img class="img2" src="images/img-right-bottom2.png" alt="left">
+            </div>
+          </div>
+            <div class="heading-box">
+              <h2 class="heading">команда</h2>
+            </div>
+        </article>
+        <article id="panel-2" class="panel full-screen ">
+          <div class="container">
+            <div class="inner">
+              <div class="box-title">
+                <h3>
+                  Простота и <br> функциональность
+                </h3>
+              </div>
+              <div class="gallery2">
+                <div class="box1" data-aos="fade-up">
+                  <img src="images/panel-2-1.png" alt="panel" >
+                  <div class="link-right link-right1" data-bs-custom-class="custom-tooltip2" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Натуральные материалы и нейтральные цвета">
+                    <img src="images/right-link.svg" alt="right">
+                  </div>
+                  <div class="link-right link-right2" data-bs-custom-class="custom-tooltip3" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Натуральные материалы и нейтральные цвета">
+                    <img src="images/right-link.svg" alt="right">
+                  </div>
+                </div>
+                <div class="box2" data-aos="fade-up">
+                  <img src="images/panel-2-2.png" alt="panel">
+                  <div class="link-right link-right1" data-bs-custom-class="custom-tooltip2" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Дерево в мебели и отделке">
+                    <img src="images/right-link.svg" alt="right">
+                  </div>
+                </div>
+                <div class="box3" data-aos="fade-up">
+                  <img src="images/panel-2-3.png" alt="panel">
+                  <div class="link-right link-right1" data-bs-custom-class="custom-tooltip3" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Живые растения в интерьере">
+                    <img src="images/right-link.svg" alt="right">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
       </div>
 
     </section>
@@ -866,7 +934,53 @@
   </div>
 </div>
 
+<div class="modal modal-slider  fade"  id="modal-slider" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-slider modal-fullscreen">
+    <div class="modal-content">
+      <div id="slider-image" class="slider-image" style="background-image: url('images/home.jpg')">
+       <div class="container slider-image-container">
+         <div class="top-box">
+           <h3>галерея</h3>
+           <div class="modal-btn-close">
+             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+           </div>
+         </div>
+         <div class="footer-box">
+           <div class="button">
+             <button class="btn-white footer-box-btn d-flex align-items-center">
+               Дом в поселке Тихие Зори
+               <img class="ms-16" src="images/arrow-down-fill.svg" alt="arrow">
+             </button>
+           </div>
+           <label id="switch-planning" class="switch-planning">
+             <input type="checkbox">
+             <span>
+              Фото
+              <i>3D</i>
+            </span>
+           </label>
 
+           <div class="d-flex align-items-center">
+             <div class="slider-icon d-flex align-items-center me-24">
+               <div class="icon text-center me-2">
+                 <img class="left-btn " src="images/arrow-left.svg" alt="left">
+               </div>
+               <div class="icon text-center">
+                 <img class="right-btn" src="images/arrow-right.svg" alt="left">
+               </div>
+             </div>
+             <div class="count">
+               <span>1 /</span>
+               <samp></samp>
+             </div>
+           </div>
+         </div>
+       </div>
+      </div>
+
+    </div>
+  </div>
+</div>
 
 
 <script src="js/fastfront.js"></script>

@@ -15,6 +15,52 @@ AOS.init();
 const windowHeight = $(window).height()
 
 
+// Header
+
+
+const headerSlider = [
+    {
+        name: "частные дома",
+        url: "/images/home.jpg"
+    },
+    {
+        name: "банные комплексы ",
+        url: "/images/header-bg.png"
+    },
+    {
+        name: "беседки",
+        url: "/images/home.jpg"
+    },
+    {
+        name: "гаражи",
+        url: "/images/header-bg.png"
+    },
+    {
+        name: "пространства",
+        url: "/images/home.jpg"
+    }
+]
+
+
+
+
+const headerSliderArray = [
+    'images/home.jpg',
+    'images/home2.png',
+    'images/home3.png',
+    'images/home4.png',
+    'images/home5.png',
+]
+
+
+$(window).on('load', function () {
+    headerSliderArray.forEach((url) => {
+        const img = new Image();
+        img.src = url;
+        img.onload = () => console.log('loaded')
+    })
+})
+
 ScrollTrigger.create({
     start: `top -${windowHeight - 50}`,
     end: 99999,
@@ -46,6 +92,78 @@ $('.accordion-header').on('click', function (){
     }
 
 })
+
+
+//.... Slider
+
+const left_btn = document.querySelector('.left-btn')
+const right_btn = document.querySelector('.right-btn')
+
+
+left_btn.addEventListener('click', ()=>{
+    ChangeSlider('minus')
+})
+
+right_btn.addEventListener('click', ()=>{
+    ChangeSlider('plus')
+})
+let num = 0;
+
+
+
+const headerImageBlock = document.querySelector('.slider-image');
+const count_span = document.querySelector('.count span');
+const count_samp = document.querySelector('.count samp');
+count_span.innerHTML = `${num + 1} / ${headerSliderArray.length}`
+
+function ChangeSlider(numStatus){
+
+    numStatus === 'plus' ? num++ : num--
+    console.log(num)
+    if(num >= headerSliderArray.length){
+        num = 0
+    } else if(num < 0){
+        num = headerSliderArray.length-1
+    }
+    count_span.innerText = `${num  + 1} / ${headerSliderArray.length}`
+    headerImageBlock.style.backgroundImage = `url(${headerSliderArray[num]})`;
+
+
+}
+
+
+
+// team
+
+gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
+
+/* Main navigation */
+let panelsSection = document.querySelector("#panels"),
+  panelsContainer = document.querySelector("#panels-container"),
+  tween;
+
+
+const panels = gsap.utils.toArray("#panels-container .panel");
+tween = gsap.to(panels, {
+    xPercent: -100 * ( panels.length - 1 ),
+    ease: "none",
+    scrollTrigger: {
+        trigger: "#panels-container",
+        pin: true,
+        start: "top top ",
+        scrub: 1,
+        snap: {
+            snapTo: 1 / (panels.length - 1),
+            inertia: false,
+            duration: {min: 0.1, max: 0.1}
+        },
+        end: () =>  "+=" + (panelsContainer.offsetWidth - innerWidth)
+    }
+});
+
+
+//. team End
+
 
 // function animate_function(event){
 //     if( $(this).hasClass(event.data.animateIn) ) {
