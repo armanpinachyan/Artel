@@ -1051,6 +1051,97 @@ $transMenu: 0.5s;
 //........ Engaged-business
 
 
+//...... Steps
+
+.steps{
+  margin-bottom: 7rem;
+
+  &-title{
+    color: #464441;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: 22px; /* 137.5% */
+    max-width: 320px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 30.5rem;
+  }
+
+  &-heading{
+    &-1{
+      text-align: right;
+      color: #464441;
+      transform: translateX(470px);
+    }
+    &-2{
+      color: rgba(70, 68, 65, 0.16);
+      text-align: right;
+      transform: translateX(310px);
+    }
+  }
+
+  &-bloc{
+    margin-top: 5.625rem;
+    opacity: 0;
+    &-item{
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      height: 152px;
+      border-top: 1px solid #C6C6C6;
+      padding-top: 1rem;
+
+      .one-bloc{
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        span{
+          color: rgba(70, 68, 65, 0.60);
+          font-size: 1.125rem;
+          font-style: italic;
+          font-weight: 400;
+          line-height: 22px;
+          text-transform: uppercase;
+          margin-right: 3.625rem;
+        }
+        .image{
+          width: 192px;
+          img{
+            position: relative;
+            top: -122px;
+          }
+        }
+        h3{
+          color: #464441;
+          font-size: 2.5rem;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 3rem; /* 120% */
+          text-transform: uppercase;
+          margin-left: 3.625rem;
+        }
+      }
+      .two-bloc{
+        p{
+          max-width: 480px;
+          width: 100%;
+          color: rgba(70, 68, 65, 0.60);
+          text-align: right;
+          font-size: 1rem;
+          font-weight: 375;
+          letter-spacing: 0.32px;
+        }
+      }
+    }
+  }
+
+
+}
+
+//..... End Steps
+
 
 ///...... . Map
 
