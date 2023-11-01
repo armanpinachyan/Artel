@@ -21,27 +21,74 @@ const windowHeight = $(window).height()
 const headerSlider = [
     {
         name: "частные дома",
-        url: "/images/home.jpg"
+        url: "/images/header-bg.png"
     },
     {
         name: "банные комплексы ",
-        url: "/images/header-bg.png"
+        url: "/images/header-img-1.jpg",
     },
     {
         name: "беседки",
-        url: "/images/home.jpg"
+        url: "/images/header-img-2.jpg"
     },
     {
         name: "гаражи",
-        url: "/images/header-bg.png"
+        url: "/images/header-img-3.jpg"
     },
     {
         name: "пространства",
-        url: "/images/home.jpg"
+        url: "/images/header-img-4.jpg"
     }
 ]
 
 
+headerSlider.forEach((sliderItem, index) => {
+    $('.header-image').append(`<img id="header_slide_${index}" src="${sliderItem.url}" class="${index === 0 ? 'opacity-1' : 'opacity-0'}"  alt="haeder">`)
+    $('.header-info-top-buttons').append(`<button class="me-1 ${index === 0 ? 'active' : ''}">${sliderItem.name}</button>`)
+
+    if(index === headerSlider.length - 1){
+        startClickHeaderNavigationButtons();
+    }
+})
+
+let sliderActiveIndex =0;
+setInterval(() => {
+
+    changeSlider(sliderActiveIndex)
+    if(sliderActiveIndex === headerSlider.length - 1){
+        sliderActiveIndex = -1;
+    }
+    sliderActiveIndex++;
+}, 2000)
+
+
+
+function startClickHeaderNavigationButtons(){
+    const navigateButtons = $('.header-info-top-buttons button');
+
+    navigateButtons.on('click', function (){
+        const thisElem = $(this);
+        const name = thisElem.text();
+
+        headerSlider.forEach((item, index) => {
+            if(item.name === name){
+                sliderActiveIndex = index;
+                changeSlider(sliderActiveIndex)
+            }
+        })
+    })
+}
+
+
+function changeSlider(activeIndex){
+    const navigateButtons = $('.header-info-top-buttons button');
+
+    $('.header-image img').removeClass('opacity-1').addClass('opacity-0');
+    $(`#header_slide_${activeIndex}`).removeClass('opacity-0').addClass('opacity-1');
+
+    navigateButtons.removeClass(active)
+    $(navigateButtons.get(activeIndex)).addClass(active)
+}
 
 
 const headerSliderArray = [
@@ -140,8 +187,10 @@ gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 /* Main navigation */
 let panelsSection = document.querySelector("#panels"),
   panelsContainer = document.querySelector("#panels-container"),
+  panelsContainer2 = document.querySelector("#panels-container2"),
+  panelsContainer2Panel = $("#panels-container #panel-2").offset().top,
   tween;
-
+console.log(panelsContainer2Panel)
 
 const panels = gsap.utils.toArray("#panels-container .panel");
 tween = gsap.to(panels, {
@@ -158,6 +207,44 @@ tween = gsap.to(panels, {
             duration: {min: 0.1, max: 0.1}
         },
         end: () =>  "+=" + (panelsContainer.offsetWidth - innerWidth)
+    }
+});
+
+// const panels2 = gsap.utils.toArray("#panels-container2 .panel");
+// tween = gsap.to(panels2, {
+//     xPercent: -100 * ( panels2.length - 1 ),
+//     ease: "none",
+//     scrollTrigger: {
+//         trigger: "#panels-container2",
+//         pin: true,
+//         start: `top top -${5000}`,
+//         scrub: 1,
+//         snap: {
+//             snapTo: 1 / (panels2.length - 1),
+//             inertia: false,
+//             duration: {min: 0.1, max: 0.1}
+//         },
+//         end: () =>  "+=" + (panelsContainer2.offsetWidth - innerWidth)
+//     }
+// });
+
+let fixHeading = 97;
+
+ScrollTrigger.create({
+    trigger: "#panels-container2",
+    start: `top top-=-64` ,
+    end: `top top-=5000`,
+    pin: true,
+    onUpdate: function (e){
+        const percent = +(e.progress * 100).toFixed();
+
+        $('#panels-container2 .head-box').css('transform', `translateX(${fixHeading - (percent * 3)}%)`);
+        if(percent >= 80){
+            $('#panels-container2 .button').css('opacity', 1);
+        } else {
+            $('#panels-container2 .button').css('opacity', 0);
+        }
+        console.log(percent)
     }
 });
 
@@ -213,56 +300,7 @@ tween = gsap.to(panels, {
 //     const YoulGet = $('#youll-get').offset().top;
 //     console.log(YoulGet, panelNav)
 //
-//     ScrollTrigger.create({
-//         trigger: "#youll-get",
-//         start: `top top-=-79` ,
-//         end: `top top-=2500`,
-//         pin: true,
-//         onUpdate: function (e){
-//             const percent = e.progress * 100;
-//             const activeIndex = +(percent / (100 / panelNav.length)).toFixed()
-//
-//             if(activePanelNavSuccess && activeIndex < panelNav.length){
-//                 activePanelNavIndex = activeIndex;
-//                 activePanelNavSuccess = false;
-//                 const thisElement = $(panelNav[activeIndex]);
-//                 const href = thisElement.attr('href');
-//                 $('img[data-panelyoul]').removeClass('active');
-//                 $(`img[data-panelyoul="${activeIndex}"]`).addClass('active');
-//
-//                 youlTexts.addClass('d-none').removeClass('active');
-//                 const textElem = $(`#text-${href.replace(/#/g, '')}`);
-//                 textElem.removeClass('d-none');
-//
-//                 if($(window).width() <= 992){
-//                     $('.youll-get .container-youl-get .panel-youl .image').css('top', `${textElem.height() + 20}px`);
-//                 }
-//
-//                 const box_title_youl = document.getElementById('box-title-youl')
-//                 if (activeIndex === 5){
-//                     box_title_youl.classList.add('active')
-//                 } else if(activeIndex < 5) {
-//                     box_title_youl.classList.remove('active')
-//                 }
-//
-//                 setTimeout(() => {
-//                     $(href).addClass('active')
-//                     $(`#text-${href.replace(/#/g, '')}`).addClass('active')
-//                 }, 100);
-//
-//                 panelNav.removeClass('active');
-//                 thisElement.addClass('active');
-//             }
-//
-//             if(activePanelNavIndex !== activeIndex){
-//                 activePanelNavIndex = activeIndex;
-//                 activePanelNavSuccess = true;
-//             }
-//
-//         }
-//     });
-// })
-//
+
 //
 // ScrollTrigger.create({
 //     start: 'top -50',
