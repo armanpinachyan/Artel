@@ -89,6 +89,15 @@ body {
   line-height: 12px; /* 100% */
   letter-spacing: 0.24px;
   text-transform: uppercase;
+  @media (max-width: 1200px) {
+    padding: 0.9375rem .9rem;
+  }
+  @media (max-width: 768px) {
+    padding: 0.9375rem .7rem;
+    height: 36px;
+    font-size: 11px;
+    line-height: 11px;
+  }
 }
 
 .btn-white {
@@ -105,6 +114,15 @@ body {
   line-height: 12px; /* 100% */
   letter-spacing: 0.24px;
   text-transform: uppercase;
+  @media (max-width: 1200px) {
+    padding: 0.9375rem .9rem;
+  }
+  @media (max-width: 768px) {
+    padding: 0.9375rem .7rem;
+    height: 36px;
+    font-size: 11px;
+    line-height: 11px;
+  }
 }
 
 $transMenu: 0.5s;
@@ -117,22 +135,33 @@ $transMenu: 0.5s;
   line-height: 7.25rem;
   letter-spacing: -3.2px;
   text-transform: uppercase;
+  margin-bottom: 0;
   @media (max-width: 1200px) {
+    font-size: 7.3rem;
   }
   @media (max-width: 992px) {
+    font-size: 7.3rem;
+    line-height: 6.5rem;
   }
   @media (max-width: 768px) {
+    font-size: 6rem;
+    line-height: 5rem;
   }
   @media (max-width: 576px) {
+    font-size: 4rem;
+    line-height: 5rem;
   }
   @media (max-width: 475px) {
-
+    font-size: 3.9rem;
+    line-height: 4.5rem;
   }
   @media (max-width: 420px) {
-
+    font-size: 3.7rem;
+    line-height: 4rem;
   }
   @media (max-width: 375px) {
-
+    font-size: 3.3rem;
+    line-height: 3rem;
   }
 }
 
@@ -625,12 +654,30 @@ $transMenu: 0.5s;
       height: 64px;
       .logo{
         margin-right: 2.5rem;
+        @media (max-width: 1200px) {
+          margin-right: 1rem;
+        }
+        @media (max-width: 1140px) {
+          margin-right: 0;
+        }
         .logo1{
           position: relative;
           top: 28px;
+          @media (max-width: 1200px) {
+           width: 100px;
+            height: 100px;
+          }
+          @media (max-width: 576px) {
+            width: 80px;
+            height: 80px;
+            top: 20px;
+          }
         }
         .logo2{
           display: none;
+          @media (max-width: 768px) {
+            width: 100px;
+          }
         }
       }
       .links a{
@@ -639,10 +686,17 @@ $transMenu: 0.5s;
         color: #FFF;
         font-size: 12px;
         font-weight: 600;
-        line-height: 18px; /* 150% */
+        line-height: 1.125rem; /* 150% */
         letter-spacing: 0.24px;
         text-transform: uppercase;
         margin-right: 1.25rem;
+        @media (max-width: 1150px) {
+          margin-right: .7rem;
+          font-size: 10px;
+        }
+        @media (max-width: 1024px) {
+          display: none;
+        }
         &:last-child{
           margin-right: 0;
         }
@@ -653,10 +707,19 @@ $transMenu: 0.5s;
         font-size: 0.875rem;
         font-weight: 700;
         white-space: nowrap;
+        @media (max-width: 1150px) {
+          font-size: 12px;
+        }
+        @media (max-width: 576px) {
+          display: none;
+        }
       }
       .buttons{
         button{
           transition: .3s linear;
+          @media (max-width: 500px) {
+            display: none;
+          }
         }
       }
       .btn-menu{
@@ -729,8 +792,14 @@ $transMenu: 0.5s;
       .btn-inner2{
         border: 1px solid rgba(70, 68, 65, 0.40);
         backdrop-filter: blur(12px);
+        @media (max-width: 475px) {
+          font-size: 10px;
+        }
       }
       .texts{
+        @media (max-width: 768px) {
+          display: none;
+        }
         span{
           color: rgba(70, 68, 65, 0.60);
           font-size: 12px;
@@ -738,6 +807,11 @@ $transMenu: 0.5s;
           font-weight: 400;
           line-height: 18px; /* 150% */
           text-transform: uppercase;
+        }
+      }
+      .btn-inner2-blue{
+        @media (max-width: 400px) {
+          display: none;
         }
       }
     }
@@ -795,7 +869,8 @@ $transMenu: 0.5s;
       }
       &-buttons{
         display: flex;
-        button{
+        .btn-loading{
+          cursor: pointer;
           border-radius: 4px;
           background: rgba(255, 255, 255, 0.16);
           backdrop-filter: blur(10px);
@@ -804,14 +879,34 @@ $transMenu: 0.5s;
           font-size: 12px;
           font-weight: 500;
           text-transform: uppercase;
-          transition: 0.3s;
-          &:active{
-            background: #fff;
-            color: #464441;
+          transition: 2s;
+          position: relative;
+          overflow: hidden;
+          &.active_loading{
+            .loading{
+              width: 100%;
+              opacity: 1;
+              transition: width 2s linear, opacity 0.5s, padding .8s;
+              padding: 5px 8px 3px 8px;
+            }
           }
-          &.active{
+          .loading{
+            white-space: nowrap;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 0;
+            opacity: 0;
+            height: 100%;
+            transition: 0.3s;
             background: #fff;
+            z-index: 1;
             color: #464441;
+            font-size: 12px;
+            font-weight: 500;
+            text-transform: uppercase;
+            padding: 5px 0 3px 0;
+            overflow: hidden;
           }
         }
 
@@ -826,6 +921,8 @@ $transMenu: 0.5s;
         justify-content: center;
         align-items: center;
         cursor: pointer;
+        position: fixed;
+        z-index: 1000;
         div{
           width: 52px;
           height: 52px;
@@ -1329,6 +1426,7 @@ $transMenu: 0.5s;
   &-bloc{
     margin-top: 5.625rem;
     opacity: 0;
+    transform: translateX(1000px);
     &-item{
       display: flex;
       justify-content: space-between;

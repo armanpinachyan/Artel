@@ -12,8 +12,23 @@ const {
 AOS.init();
 
 
-const windowHeight = $(window).height()
+const windowHeight = $(window).height();
 
+
+$(window).on('resize', function (){
+    checkPositionCall()
+})
+
+checkPositionCall();
+function checkPositionCall(){
+    const iconPhoneBack = $('#icon-phone-back').offset();
+    const iconPhone = $('.icon-phone');
+
+    iconPhone.css({
+        left: iconPhoneBack.left,
+        top: iconPhoneBack.top,
+    })
+}
 
 // Header
 
@@ -44,7 +59,12 @@ const headerSlider = [
 
 headerSlider.forEach((sliderItem, index) => {
     $('.header-image').append(`<img id="header_slide_${index}" src="${sliderItem.url}" class="${index === 0 ? 'opacity-1' : 'opacity-0'}"  alt="haeder">`)
-    $('.header-info-top-buttons').append(`<button class="me-1 ${index === 0 ? 'active' : ''}">${sliderItem.name}</button>`)
+    $('.header-info-top-buttons').append(
+      `<div class="me-1 btn-loading ${index === 0 ? 'active' : ''}">
+        ${sliderItem.name}
+        <div class="loading">${sliderItem.name}</div>
+      </div>
+    `)
 
     if(index === headerSlider.length - 1){
         startClickHeaderNavigationButtons();
@@ -52,19 +72,38 @@ headerSlider.forEach((sliderItem, index) => {
 })
 
 let sliderActiveIndex =0;
+let buttonsActive =0;
+
 setInterval(() => {
+    const navigateButtons = $('.header-info-top-buttons .btn-loading');
 
     changeSlider(sliderActiveIndex)
     if(sliderActiveIndex === headerSlider.length - 1){
         sliderActiveIndex = -1;
     }
+    // if(sliderActiveIndex === -1){
+    //     setTimeout(() => {
+    //         navigateButtons.removeClass('active_loading');
+    //       //  $(navigateButtons.get(0)).addClass('active_loading')
+    //     }, 2500)
+    // }
+    if(buttonsActive  ===  navigateButtons.length){
+        navigateButtons.removeClass('active_loading');
+        console.log(222)
+    }
+    if(buttonsActive  ===  navigateButtons.length){
+        buttonsActive = -1
+    }
     sliderActiveIndex++;
+    buttonsActive++
+    console.log(buttonsActive)
+
 }, 2000)
 
 
 
 function startClickHeaderNavigationButtons(){
-    const navigateButtons = $('.header-info-top-buttons button');
+    const navigateButtons = $('.header-info-top-buttons .btn-loading');
 
     navigateButtons.on('click', function (){
         const thisElem = $(this);
@@ -81,13 +120,15 @@ function startClickHeaderNavigationButtons(){
 
 
 function changeSlider(activeIndex){
-    const navigateButtons = $('.header-info-top-buttons button');
-
+    const navigateButtons = $('.header-info-top-buttons .btn-loading');
     $('.header-image img').removeClass('opacity-1').addClass('opacity-0');
     $(`#header_slide_${activeIndex}`).removeClass('opacity-0').addClass('opacity-1');
 
+
     navigateButtons.removeClass(active)
     $(navigateButtons.get(activeIndex)).addClass(active)
+
+    $(navigateButtons.get(activeIndex)).addClass('active_loading')
 }
 
 
@@ -106,6 +147,18 @@ $(window).on('load', function () {
         img.src = url;
         img.onload = () => console.log('loaded')
     })
+    const Services = $('#services').offset().top
+    ScrollTrigger.create({
+        trigger: "#services",
+        start: `top top`,
+        end: 20,
+        onEnter: () => {
+            menu.removeClass('nav-works')
+        },
+        onEnterBack: () => {
+            menu.addClass('nav-works')
+        }
+    });
 })
 
 ScrollTrigger.create({
@@ -224,7 +277,45 @@ ScrollTrigger.create({
     }
 });
 
+//.... Step
 
+const steps = $('#steps')
+const stepsTitle = $('#steps .steps-title')
+const stepsBloc = $('#steps .steps-bloc')
+const stepsHeading1 = $('#steps .steps-heading-1')
+const stepsHeading2 = $('#steps .steps-heading-2')
+ScrollTrigger.create({
+    trigger: "#steps",
+    start: `top top-=-200`,
+    end: `top top-=1500`,
+    pin: true,
+    onUpdate: function (e){
+        const percent = +(e.progress * 100).toFixed();
+
+        stepsTitle.css('opacity', (1 - e.progress));
+        stepsBloc.css({
+            'opacity': `${0 + e.progress}`,
+            'transform': `translateX(-${percent}px)`,
+        });
+
+        stepsHeading1.css({
+            'transform': `translateX(-${percent}px)`,
+        });
+
+        stepsHeading2.css({
+            'transform': `translateX(-${percent}px)`,
+        });
+
+        const secPercent = (secLeft * percent) / 100;
+
+        // $('#works').css({
+        //     'transform': `translateX(-${percent}vw)`,
+        //     left: `-${secLeft - secPercent}px`,
+        //     top: `${200 - (200 * percent) / 100}px`,
+        // })
+
+    }
+});
 
 /* Main navigation */
 let panelsSection = document.querySelector("#panels"),
