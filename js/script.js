@@ -21,23 +21,23 @@ const windowHeight = $(window).height()
 const headerSlider = [
     {
         name: "частные дома",
-        url: "/images/header-bg.png"
+        url: "images/header-bg.png"
     },
     {
         name: "банные комплексы ",
-        url: "/images/header-img-1.jpg",
+        url: "images/header-img-1.jpg",
     },
     {
         name: "беседки",
-        url: "/images/header-img-2.jpg"
+        url: "images/header-img-2.jpg"
     },
     {
         name: "гаражи",
-        url: "/images/header-img-3.jpg"
+        url: "images/header-img-3.jpg"
     },
     {
         name: "пространства",
-        url: "/images/header-img-4.jpg"
+        url: "images/header-img-4.jpg"
     }
 ]
 
