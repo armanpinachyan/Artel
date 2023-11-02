@@ -114,16 +114,17 @@ ScrollTrigger.create({
     toggleClass: {className: 'nav--fixed', targets: '.menu '},
 });
 
-$(window).on('load', function (){
-    const Works = $('#works').offset().top;
-    console.log(Works)
-    ScrollTrigger.create({
-        start: `top -${Works}`,
-        end: 8000,
-        toggleClass: {className: 'nav-works', targets: '.menu '},
-    });
 
-})
+
+// $(window).on('load', function (){
+//     const Works = $('#works').offset().top;
+//     ScrollTrigger.create({
+//         start: `top -${Works}`,
+//         end: 8000,
+//         toggleClass: {className: 'nav-works', targets: '.menu '},
+//     });
+//
+// })
 
 
 //. ...Accordion btn
@@ -184,6 +185,47 @@ function ChangeSlider(numStatus){
 
 gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
+
+const menu = $('.menu');
+const ourWork = $('.our-work');
+const worksColBoxText = $('.works-col-box-text');
+const worksHeading = $('.works-heading');
+let secLeft = 650;
+
+ScrollTrigger.create({
+    trigger: "#works-box",
+    start: `top top-=-200`,
+    end: `top top-=1500`,
+    pin: true,
+    onUpdate: function (e){
+        const percent = +(e.progress * 100).toFixed();
+
+        ourWork.css('opacity', (1 - e.progress));
+        worksColBoxText.css('opacity', (1 - e.progress));
+
+        worksHeading.css({
+            'opacity': e.progress,
+            'left': `-${400 - (400 * percent) / 100}px`
+        });
+
+        const secPercent = (secLeft * percent) / 100;
+
+        $('#works').css({
+            'transform': `translateX(-${percent}vw)`,
+            left: `-${secLeft - secPercent}px`,
+            top: `${200 - (200 * percent) / 100}px`,
+        })
+
+        if(percent >= 99){
+            menu.addClass('nav-works')
+        } else {
+            menu.removeClass('nav-works')
+        }
+    }
+});
+
+
+
 /* Main navigation */
 let panelsSection = document.querySelector("#panels"),
   panelsContainer = document.querySelector("#panels-container"),
@@ -210,24 +252,6 @@ tween = gsap.to(panels, {
     }
 });
 
-// const panels2 = gsap.utils.toArray("#panels-container2 .panel");
-// tween = gsap.to(panels2, {
-//     xPercent: -100 * ( panels2.length - 1 ),
-//     ease: "none",
-//     scrollTrigger: {
-//         trigger: "#panels-container2",
-//         pin: true,
-//         start: `top top -${5000}`,
-//         scrub: 1,
-//         snap: {
-//             snapTo: 1 / (panels2.length - 1),
-//             inertia: false,
-//             duration: {min: 0.1, max: 0.1}
-//         },
-//         end: () =>  "+=" + (panelsContainer2.offsetWidth - innerWidth)
-//     }
-// });
-
 let fixHeading = 97;
 
 ScrollTrigger.create({
@@ -247,8 +271,6 @@ ScrollTrigger.create({
         console.log(percent)
     }
 });
-
-
 //. team End
 
 

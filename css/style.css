@@ -842,8 +842,13 @@ body {
   text-transform: uppercase;
 }
 
+.works-box {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+}
 .works-box .our-work {
-  min-width: calc(100vw - 650px);
+  min-width: 100vw;
 }
 .works-box .our-work-inner {
   display: flex;
@@ -873,6 +878,9 @@ body {
 }
 .works-box .works {
   min-width: 100vw;
+  position: relative;
+  left: -650px;
+  top: 200px;
 }
 .works-box .works-heading {
   color: #464441;
@@ -882,6 +890,8 @@ body {
   text-transform: uppercase;
   margin-bottom: 11.5rem;
   opacity: 0;
+  position: relative;
+  left: -400px;
 }
 .works-box .works-heading span {
   color: rgba(70, 68, 65, 0.16);
