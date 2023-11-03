@@ -279,43 +279,43 @@ ScrollTrigger.create({
 
 //.... Step
 
-const steps = $('#steps')
-const stepsTitle = $('#steps .steps-title')
-const stepsBloc = $('#steps .steps-bloc')
-const stepsHeading1 = $('#steps .steps-heading-1')
-const stepsHeading2 = $('#steps .steps-heading-2')
-ScrollTrigger.create({
-    trigger: "#steps",
-    start: `top top-=-200`,
-    end: `top top-=1500`,
-    pin: true,
-    onUpdate: function (e){
-        const percent = +(e.progress * 100).toFixed();
-
-        stepsTitle.css('opacity', (1 - e.progress));
-        stepsBloc.css({
-            'opacity': `${0 + e.progress}`,
-            'transform': `translateX(-${percent}px)`,
-        });
-
-        stepsHeading1.css({
-            'transform': `translateX(-${percent}px)`,
-        });
-
-        stepsHeading2.css({
-            'transform': `translateX(-${percent}px)`,
-        });
-
-        const secPercent = (secLeft * percent) / 100;
-
-        // $('#works').css({
-        //     'transform': `translateX(-${percent}vw)`,
-        //     left: `-${secLeft - secPercent}px`,
-        //     top: `${200 - (200 * percent) / 100}px`,
-        // })
-
-    }
-});
+// const steps = $('#steps')
+// const stepsTitle = $('#steps .steps-title')
+// const stepsBloc = $('#steps .steps-bloc')
+// const stepsHeading1 = $('#steps .steps-heading-1')
+// const stepsHeading2 = $('#steps .steps-heading-2')
+// ScrollTrigger.create({
+//     trigger: "#steps",
+//     start: `top top-=-200`,
+//     end: `top top-=1500`,
+//     pin: true,
+//     onUpdate: function (e){
+//         const percent = +(e.progress * 100).toFixed();
+//
+//         stepsTitle.css('opacity', (1 - e.progress));
+//         stepsBloc.css({
+//             'opacity': `${0 + e.progress}`,
+//             'transform': `translateX(-${percent}px)`,
+//         });
+//
+//         stepsHeading1.css({
+//             'transform': `translateX(-${percent}px)`,
+//         });
+//
+//         stepsHeading2.css({
+//             'transform': `translateX(-${percent}px)`,
+//         });
+//
+//         const secPercent = (secLeft * percent) / 100;
+//
+//         // $('#works').css({
+//         //     'transform': `translateX(-${percent}vw)`,
+//         //     left: `-${secLeft - secPercent}px`,
+//         //     top: `${200 - (200 * percent) / 100}px`,
+//         // })
+//
+//     }
+// });
 
 /* Main navigation */
 let panelsSection = document.querySelector("#panels"),
