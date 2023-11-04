@@ -1671,26 +1671,60 @@ body {
 .team-image {
   position: absolute;
 }
+.team-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .team .image-left {
   left: 0;
   top: 0;
-  width: 30vw;
+  width: 17vw;
+  height: 12vw;
+}
+@media (max-width: 576px) {
+  .team .image-left {
+    width: 30vw;
+    height: 22vw;
+  }
 }
 .team .image-left .img2 {
   position: absolute;
-  left: 40%;
+  width: 20vw;
+  height: 15vw;
+  left: 78%;
   z-index: -1;
   top: 80%;
+}
+@media (max-width: 576px) {
+  .team .image-left .img2 {
+    width: 30vw;
+    height: 22vw;
+  }
 }
 .team .image-left-bottom {
   left: 0;
   bottom: 0;
-  width: 30vw;
+  width: 25vw;
+  height: 14vw;
+}
+@media (max-width: 576px) {
+  .team .image-left-bottom {
+    width: 35vw;
+    height: 28vw;
+  }
 }
 .team .image-right {
   right: 0;
   top: 0;
-  width: 30vw;
+  width: 25vw;
+  height: 17vw;
+}
+@media (max-width: 576px) {
+  .team .image-right {
+    width: 40vw;
+    height: 28vw;
+  }
 }
 .team .image-right .img {
   position: absolute;
@@ -1699,21 +1733,42 @@ body {
 .team .image-right-bottom {
   right: 0;
   bottom: 0;
-  max-width: 40vw;
-  width: 100%;
+  width: 29vw;
+  height: 9vw;
+}
+@media (max-width: 576px) {
+  .team .image-right-bottom {
+    width: 45vw;
+    height: 25vw;
+  }
 }
 .team .image-right-bottom .title {
   position: relative;
-  left: 50%;
-  top: -185px;
+  left: 20%;
+  top: -85px;
   color: rgba(255, 255, 255, 0.6);
-  font-size: 12px;
+  font-size: 0.75rem;
   font-style: italic;
   font-weight: 400;
-  line-height: 18px; /* 150% */
+  line-height: 1.125rem; /* 150% */
   text-transform: uppercase;
-  max-width: 244px;
+  max-width: 15.25rem;
   width: 100%;
+}
+@media (max-width: 1024px) {
+  .team .image-right-bottom .title {
+    left: 20%;
+    top: -50px;
+    font-size: 0.7rem;
+  }
+}
+@media (max-width: 576px) {
+  .team .image-right-bottom .title {
+    left: 24%;
+    top: -40px;
+    max-width: 10rem;
+    font-size: 0.5rem;
+  }
 }
 .team .image-right-bottom .img {
   position: absolute;
@@ -1722,9 +1777,23 @@ body {
 }
 .team .image-right-bottom .img2 {
   position: absolute;
-  bottom: 80px;
-  left: 12%;
+  width: 11vw;
+  height: 11vw;
+  bottom: -30px;
+  left: -109px;
   z-index: -1;
+}
+@media (max-width: 1024px) {
+  .team .image-right-bottom .img2 {
+    left: -60px;
+    bottom: -15px;
+  }
+}
+@media (max-width: 576px) {
+  .team .image-right-bottom .img2 {
+    width: 22vw;
+    height: 22vw;
+  }
 }
 .team .heading-box {
   display: flex;
@@ -1853,6 +1922,13 @@ body {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 576px) {
+  .map .container-map .wrapper {
+    justify-content: space-between;
+    flex-direction: column;
+    bottom: 6rem;
+  }
+}
 .map .container-map .wrapper .box-image {
   display: flex;
   align-items: start;
@@ -1862,14 +1938,14 @@ body {
 }
 .map .container-map .wrapper .box-image .title h4 {
   color: #464441;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 500;
   line-height: 18px; /* 128.571% */
   text-transform: uppercase;
 }
 .map .container-map .wrapper .box-image .title .address {
   color: rgba(70, 68, 65, 0.6);
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 400;
   line-height: 18px; /* 128.571% */
   text-transform: uppercase;
@@ -1879,9 +1955,15 @@ body {
   align-items: center;
   margin-top: 3.875rem;
 }
+@media (max-width: 475px) {
+  .map .container-map .wrapper .box-image .title .time {
+    flex-direction: column;
+    align-items: start;
+  }
+}
 .map .container-map .wrapper .box-image .title .time .number {
   color: #5E7FF4;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-feature-settings: "salt" on;
   font-weight: 500;
   line-height: 14px; /* 100% */
@@ -1889,7 +1971,7 @@ body {
 }
 .map .container-map .wrapper .box-image .title .time .times {
   color: #464441;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 500;
   font-feature-settings: "salt" on;
   line-height: 14px; /* 100% */
@@ -1898,17 +1980,29 @@ body {
 .map .container-map .wrapper .box {
   display: flex;
   align-items: center;
+  height: 130px;
+}
+@media (max-width: 576px) {
+  .map .container-map .wrapper .box {
+    height: 130px;
+    margin-top: 1rem;
+  }
 }
 .map .container-map .wrapper .box-item {
   height: 100%;
-  padding: 0 0 16px 16px;
+  padding: 0 0 1rem 1rem;
   display: flex;
   justify-content: start;
   align-items: end;
 }
 .map .container-map .wrapper .box-item:nth-of-type(1) {
   background: #F3F4F4;
-  width: 214px;
+  width: 13vw;
+}
+@media (max-width: 576px) {
+  .map .container-map .wrapper .box-item:nth-of-type(1) {
+    width: 200px;
+  }
 }
 .map .container-map .wrapper .box-item:nth-of-type(1) .logo {
   width: 48px;
@@ -1919,9 +2013,20 @@ body {
   align-items: center;
   cursor: pointer;
 }
+@media (max-width: 576px) {
+  .map .container-map .wrapper .box-item:nth-of-type(1) .logo {
+    width: 32px;
+    height: 32px;
+  }
+}
 .map .container-map .wrapper .box-item:nth-of-type(2) {
   background: #5E7FF4;
-  width: 214px;
+  width: 13vw;
+}
+@media (max-width: 576px) {
+  .map .container-map .wrapper .box-item:nth-of-type(2) {
+    width: 200px;
+  }
 }
 .map .container-map .wrapper .box-item:nth-of-type(2) .logo {
   width: 48px;
@@ -1931,6 +2036,12 @@ body {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+}
+@media (max-width: 576px) {
+  .map .container-map .wrapper .box-item:nth-of-type(2) .logo {
+    width: 32px;
+    height: 32px;
+  }
 }
 .map .container-map .wrapper .box-item:nth-of-type(2) .text h4 {
   color: #FFF;
@@ -1946,7 +2057,7 @@ body {
 .map .container-map .wrapper .box-item .text h4 {
   color: #464441;
   font-feature-settings: "salt" on;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 500;
   line-height: 18px; /* 128.571% */
   text-transform: uppercase;
@@ -1955,7 +2066,7 @@ body {
 .map .container-map .wrapper .box-item .text span {
   color: rgba(70, 68, 65, 0.6);
   font-feature-settings: "salt" on;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 400;
   line-height: 18px;
   text-transform: uppercase;
