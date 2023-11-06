@@ -1905,7 +1905,7 @@ $transMenu: 0.5s;
 
 .image-left-bottom{
   left: 0;
-  bottom: 0;
+  bottom: 45px;
   width: 25vw;
   height: 14vw;
   @media (max-width: 576px) {
@@ -1931,9 +1931,9 @@ $transMenu: 0.5s;
 
   .image-right-bottom{
     right: 0;
-    bottom: 0;
+    bottom: 20px;
     width: 29vw;
-    height: 9vw;
+    height: 11vw;
     @media (max-width: 576px) {
       width: 45vw;
       height: 25vw;
