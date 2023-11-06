@@ -475,6 +475,12 @@ body {
   background-position: center;
   transition: 0.3s;
 }
+@media (max-width: 576px) {
+  .modal-slider .modal-dialog-slider .slider-image {
+    height: 100%;
+    min-height: unset;
+  }
+}
 .modal-slider .modal-dialog-slider .slider-image-container {
   display: flex;
   justify-content: space-between;
@@ -1898,6 +1904,7 @@ body {
   .team .image-left-bottom {
     width: 35vw;
     height: 28vw;
+    bottom: 10px;
   }
 }
 .team .image-right {
@@ -1926,6 +1933,7 @@ body {
   .team .image-right-bottom {
     width: 45vw;
     height: 25vw;
+    bottom: 5px;
   }
 }
 .team .image-right-bottom .title {
