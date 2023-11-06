@@ -1789,6 +1789,11 @@ body {
   padding: 0;
   overflow: hidden;
 }
+@media (max-width: 576px) {
+  #team #panels-container {
+    height: 93vh;
+  }
+}
 
 #team #panels-container .panel {
   position: relative;
@@ -1800,6 +1805,11 @@ body {
   display: flex;
   text-align: left;
   border: 0;
+}
+@media (max-width: 576px) {
+  #team #panels-container .panel {
+    height: 93vh;
+  }
 }
 
 #team #panels-container2 {
@@ -1814,6 +1824,11 @@ body {
   overflow: hidden;
   border: 0;
 }
+@media (max-width: 576px) {
+  #team #panels-container2 {
+    height: auto;
+  }
+}
 
 #team #panels-container2 .panel {
   position: relative;
@@ -1825,6 +1840,11 @@ body {
   display: flex;
   text-align: left;
   border: 0;
+}
+@media (max-width: 576px) {
+  #team #panels-container2 .panel {
+    height: 100vh;
+  }
 }
 
 .full-screen {

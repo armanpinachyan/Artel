@@ -1810,6 +1810,9 @@ $transMenu: 0.5s;
   flex-wrap: nowrap;
   padding: 0;
   overflow: hidden;
+  @media (max-width: 576px) {
+    height: 93vh;
+  }
 }
 
 #team #panels-container .panel {
@@ -1822,6 +1825,9 @@ $transMenu: 0.5s;
   display: flex;
   text-align: left;
   border: 0;
+  @media (max-width: 576px) {
+    height: 93vh;
+  }
 }
 
 
@@ -1836,6 +1842,9 @@ $transMenu: 0.5s;
   padding: 0;
   overflow: hidden;
   border: 0;
+  @media (max-width: 576px) {
+    height: auto;
+  }
 }
 
 #team #panels-container2 .panel {
@@ -1848,6 +1857,9 @@ $transMenu: 0.5s;
   display: flex;
   text-align: left;
   border: 0;
+  @media (max-width: 576px) {
+    height: 100vh;
+  }
 }
 
 .full-screen {
