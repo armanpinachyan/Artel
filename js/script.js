@@ -362,7 +362,43 @@ ScrollTrigger.create({
         console.log(percent)
     }
 });
+
+
 //. team End
+
+
+
+//... Modal
+
+const modal_links = document.querySelectorAll('#modal-links a')
+const modal_menu_buttons = document.querySelectorAll('#modal-menu-buttons button')
+
+const modal_menu = new bootstrap.Modal(document.getElementById('modal-menu'), {
+    keyboard: false
+})
+const modal_project = new bootstrap.Modal(document.getElementById('modal-project'), {
+    keyboard: false
+})
+
+
+modal_links.forEach((link)=>{
+    link.addEventListener('click', ()=>{
+        modal_menu.hide()
+    })
+})
+
+modal_menu_buttons.forEach((el =>{
+    el.addEventListener('click', ()=> {
+        modal_menu.hide()
+        setTimeout(()=>{
+            modal_project.show()
+        },200)
+    })
+}))
+
+
+//... Modal End
+
 
 
 // function animate_function(event){

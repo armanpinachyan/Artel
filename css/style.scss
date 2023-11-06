@@ -94,9 +94,9 @@ body {
   }
   @media (max-width: 768px) {
     padding: 0.9375rem .7rem;
-    height: 36px;
+    height: 34px;
     font-size: 11px;
-    line-height: 15px;
+    line-height: 12px;
   }
 }
 
@@ -119,9 +119,9 @@ body {
   }
   @media (max-width: 768px) {
     padding: 0.9375rem .7rem;
-    height: 36px;
+    height: 34px;
     font-size: 11px;
-    line-height: 15px;
+    line-height: 12px;
   }
 }
 
@@ -172,9 +172,6 @@ $transMenu: 0.5s;
   .modal-content {
     border: 0;
     border-radius: 0;
-    @media (max-width: 576px) {
-      height: auto;
-    }
   }
 }
 
@@ -192,6 +189,9 @@ $transMenu: 0.5s;
         background: #fff;
         display: flex ;
       flex-direction: unset;
+      @media (max-width: 576px) {
+        height: 100vh;
+      }
     .modal-header{
       position: absolute;
       right: 24px;
@@ -220,9 +220,15 @@ $transMenu: 0.5s;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        padding: 0 0 40px 40px;
+        padding: 0 0 2.5rem 2.5rem;
         display: flex;
         align-items: end;
+        @media (max-width: 475px) {
+          padding: 0 0 2.5rem 1.5rem;
+        }
+        @media (max-width: 425px) {
+          padding: 0 0 2rem .5rem;
+        }
         h3{
           color: #FFF;
           font-size: 2rem;
@@ -230,6 +236,9 @@ $transMenu: 0.5s;
           line-height: 100%; /* 32px */
           letter-spacing: 0.64px;
           text-transform: uppercase;
+          @media (max-width: 475px) {
+            font-size: 1.5rem;
+          }
         }
         .btn-modal-menu1{
           max-width: 180px;
@@ -238,6 +247,18 @@ $transMenu: 0.5s;
       }
       .modal-body{
         padding: 4rem 2.5rem 2.5rem 2.5rem;
+        @media (max-width: 576px) {
+          display: flex;
+          justify-content: space-between;
+          align-items: start;
+          flex-direction: column;
+        }
+        @media (max-width: 475px) {
+          padding: 5rem 1.5rem 2.5rem 1.5rem;
+        }
+        @media (max-width: 425px) {
+          padding: 5rem .5rem 2rem .5rem;
+        }
         .links a{
           display: block;
           color: rgba(70, 68, 65, 0.60);
@@ -256,22 +277,26 @@ $transMenu: 0.5s;
         }
         .number-data{
           margin-top: 5.3125rem;
+          @media (max-width: 576px) {
+          margin-top: 5rem;
+          }
           h3{
             color: #464441;
-            font-size: 14px;
+            font-size: 0.875rem;
             font-weight: 700;
             line-height: normal;
-            white-space: nowrap;
             border-right: 1px solid rgba(70, 68, 65, 0.20);
             padding-right: 0.5rem;
+            white-space: nowrap;
             a{
               color: #464441;
             }
           }
           h4{
+            white-space: nowrap;
             padding-left: 0.5rem ;
             color: rgba(70, 68, 65, 0.60);
-            font-size: 14px;
+            font-size: 0.875rem;
             font-weight: 500;
             line-height: 14px; /* 100% */
             text-transform: uppercase;
@@ -311,6 +336,9 @@ $transMenu: 0.5s;
       display: flex;
       flex-direction: unset;
       position: relative;
+      @media (max-width: 576px) {
+        height: 100vh;
+      }
       .modal-header{
         position: absolute;
         right: 24px;
@@ -343,7 +371,12 @@ $transMenu: 0.5s;
 
       .modal-body {
         padding: 2rem ;
-
+        @media (max-width: 576px) {
+          padding: 4rem 1rem 2rem 1rem;
+        }
+        @media (max-width: 576px) {
+          padding: 5rem 1rem 2rem 1rem;
+        }
         &-head{
           color: #464441;
           font-size: 1.5rem;
@@ -379,10 +412,10 @@ $transMenu: 0.5s;
             }
             &::placeholder{
               color: #2D2D2C;
-              font-size: 12px;
+              font-size: 0.75rem;
               font-style: normal;
               font-weight: 400;
-              line-height: 16px; /* 133.333% */
+              line-height: 1rem; /* 133.333% */
               text-transform: uppercase;
             }
 
@@ -473,6 +506,26 @@ $transMenu: 0.5s;
           justify-content: space-between;
           align-items: center;
           margin-bottom: 3rem;
+          @media (max-width: 576px) {
+            flex-direction: column;
+          }
+          &-button-box{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: calc(50% + 90px);
+            @media (max-width: 576px) {
+              padding-bottom: 20px;
+              width: 100%;
+            }
+          }
+
+          &-icon-box{
+            @media (max-width: 576px) {
+              width: 100%;
+              justify-content: space-between;
+            }
+          }
 
           .button{
             .footer-box-btn{
@@ -482,6 +535,11 @@ $transMenu: 0.5s;
               line-height: 1.125rem; /* 128.571% */
               text-transform: uppercase;
               padding: 11px 16px 8px 16px;
+              @media (max-width: 425px) {
+                padding: 11px 12px 12px 12px;
+                line-height: 0;
+                font-size: .7rem;
+              }
             }
           }
 
@@ -511,7 +569,10 @@ $transMenu: 0.5s;
               justify-content: space-between;
               align-items: center;
               font-size: 14px;
-
+              @media (max-width: 576px) {
+                width: 142px;
+                font-size: 12px;
+              }
               &:after {
                 content: "Фото";
                 width: 89px;
@@ -531,6 +592,10 @@ $transMenu: 0.5s;
                 line-height: 18px; /* 128.571% */
                 text-transform: uppercase;
                 color: #464441;
+                @media (max-width: 576px) {
+                  width: 69px;
+                  font-size: 12px;
+                }
               }
             }
 
@@ -554,6 +619,9 @@ $transMenu: 0.5s;
                       width: 68px;
                       color: #464441;
                       left: 88px;
+                      @media (max-width: 576px) {
+                        left: 68px;
+                      }
                     }
 
                     background: rgba(236, 239, 243, 0.16);
@@ -569,6 +637,9 @@ $transMenu: 0.5s;
 
           .count {
             transition: 0.3s;
+            @media (max-width: 576px) {
+             padding-right: 20px;
+            }
             span {
               color: #FFF;
               font-variant-numeric: ordinal;
@@ -1014,13 +1085,28 @@ $transMenu: 0.5s;
     margin-top: 5rem;
   }
 
+  &-container{
+    overflow-x: auto;
+    &::-webkit-scrollbar {
+      width: 5px;
+      height: 2px;
+      border-radius: 5px;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 5px;
+      background: rgba(84, 83, 83, 0.27);
+    }
+
+  }
+
   &-inner{
     display: flex;
     justify-content: start;
     flex-direction: column;
-    overflow-x: auto;
+    min-width: 1000px;
+    padding-bottom: 1.875rem;
     @media (max-width: 768px) {
-      width: 800px;
+      min-width: 800px;
     }
   }
 
@@ -1352,6 +1438,22 @@ $transMenu: 0.5s;
             @media (max-width: 992px) {
               font-size: 12px;
             }
+            @media (max-width: 475px) {
+                  font-size: 11px;
+              padding: 1.8rem 0 1.8rem 0;
+            }
+            p{
+             @media (max-width: 475px) {
+               max-width: 250px;
+               width: 100%;
+             }
+            }
+            span{
+              white-space: nowrap;
+              @media (max-width: 425px) {
+                padding-right: 10px;
+              }
+            }
             .btn-round{
               transition: 0.3s;
               transform: rotate(0);
@@ -1372,12 +1474,23 @@ $transMenu: 0.5s;
               box-shadow: none;
 
             }
+
+            .price-plus{
+              width: 200px;
+              @media (max-width: 576px) {
+                width: 150px;
+              }
+            }
+
           }
 
         }
 
         .accordion-body{
           padding-left: 0;
+          @media (max-width: 576px) {
+           padding: 0 !important;
+          }
           ul{
             padding-left: 1.3rem;
             li{
@@ -1426,12 +1539,29 @@ $transMenu: 0.5s;
     margin-top: 5rem;
   }
 
+  &-container{
+    overflow-x: auto;
+    &::-webkit-scrollbar {
+      width: 5px;
+      height: 2px;
+      border-radius: 5px;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 5px;
+      background: rgba(84, 83, 83, 0.27);
+    }
+
+  }
+
+
   &-inner{
     display: flex;
     justify-content: start;
     flex-direction: column;
+    min-width: 1000px;
+    padding-bottom: 1.875rem;
     @media (max-width: 768px) {
-      width: 800px;
+      min-width: 800px;
     }
   }
 
