@@ -183,6 +183,9 @@ $transMenu: 0.5s;
     right: 0;
     max-width: 704px;
     width: 100%;
+    @media (max-width: 576px) {
+      height: 100%;
+    }
     .modal-content {
         height: 546px;
         position: relative;
@@ -190,7 +193,7 @@ $transMenu: 0.5s;
         display: flex ;
       flex-direction: unset;
       @media (max-width: 576px) {
-        height: 100vh;
+        height: 100%;
       }
     .modal-header{
       position: absolute;
@@ -1810,9 +1813,6 @@ $transMenu: 0.5s;
   flex-wrap: nowrap;
   padding: 0;
   overflow: hidden;
-  @media (max-width: 576px) {
-    height: 93vh;
-  }
 }
 
 #team #panels-container .panel {
@@ -1842,9 +1842,6 @@ $transMenu: 0.5s;
   padding: 0;
   overflow: hidden;
   border: 0;
-  @media (max-width: 576px) {
-    height: auto;
-  }
 }
 
 #team #panels-container2 .panel {

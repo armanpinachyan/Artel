@@ -188,6 +188,11 @@ body {
   max-width: 704px;
   width: 100%;
 }
+@media (max-width: 576px) {
+  .modal-menu .modal-dialog-menu {
+    height: 100%;
+  }
+}
 .modal-menu .modal-dialog-menu .modal-content {
   height: 546px;
   position: relative;
@@ -197,7 +202,7 @@ body {
 }
 @media (max-width: 576px) {
   .modal-menu .modal-dialog-menu .modal-content {
-    height: 100vh;
+    height: 100%;
   }
 }
 .modal-menu .modal-dialog-menu .modal-content .modal-header {
@@ -1789,11 +1794,6 @@ body {
   padding: 0;
   overflow: hidden;
 }
-@media (max-width: 576px) {
-  #team #panels-container {
-    height: 93vh;
-  }
-}
 
 #team #panels-container .panel {
   position: relative;
@@ -1823,11 +1823,6 @@ body {
   padding: 0;
   overflow: hidden;
   border: 0;
-}
-@media (max-width: 576px) {
-  #team #panels-container2 {
-    height: auto;
-  }
 }
 
 #team #panels-container2 .panel {

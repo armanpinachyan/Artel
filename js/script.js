@@ -332,7 +332,7 @@ tween = gsap.to(panels, {
     scrollTrigger: {
         trigger: "#panels-container",
         pin: true,
-        start: "top top ",
+        start: `top +${50}`,
         scrub: 1,
         snap: {
             snapTo: 1 / (panels.length - 1),
