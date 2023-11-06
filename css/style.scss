@@ -340,12 +340,12 @@ $transMenu: 0.5s;
       flex-direction: unset;
       position: relative;
       @media (max-width: 576px) {
-        height: 100vh;
+        height: 100%;
       }
       .modal-header{
         position: absolute;
         right: 24px;
-        top: 24px;
+        top: 28px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -398,6 +398,9 @@ $transMenu: 0.5s;
         .input-box{
           display: block;
           margin-top: 6rem ;
+          @media (max-width: 576px) {
+            margin-top: 8rem;
+          }
           input{
             display: block;
             height: 40px;

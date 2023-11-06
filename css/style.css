@@ -359,13 +359,13 @@ body {
 }
 @media (max-width: 576px) {
   .modal-project .modal-dialog-project .modal-content {
-    height: 100vh;
+    height: 100%;
   }
 }
 .modal-project .modal-dialog-project .modal-content .modal-header {
   position: absolute;
   right: 24px;
-  top: 24px;
+  top: 28px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -422,6 +422,11 @@ body {
 .modal-project .modal-dialog-project .modal-content .modal-body .input-box {
   display: block;
   margin-top: 6rem;
+}
+@media (max-width: 576px) {
+  .modal-project .modal-dialog-project .modal-content .modal-body .input-box {
+    margin-top: 8rem;
+  }
 }
 .modal-project .modal-dialog-project .modal-content .modal-body .input-box input {
   display: block;
