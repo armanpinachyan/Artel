@@ -1904,7 +1904,7 @@ body {
   .team .image-left-bottom {
     width: 35vw;
     height: 28vw;
-    bottom: 10px;
+    bottom: 0;
   }
 }
 .team .image-right {
@@ -1933,7 +1933,7 @@ body {
   .team .image-right-bottom {
     width: 45vw;
     height: 25vw;
-    bottom: 5px;
+    bottom: 0;
   }
 }
 .team .image-right-bottom .title {

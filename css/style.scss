@@ -1915,7 +1915,7 @@ $transMenu: 0.5s;
   @media (max-width: 576px) {
     width: 35vw;
     height: 28vw;
-    bottom: 10px;
+    bottom: 0;
   }
 }
 
@@ -1942,7 +1942,7 @@ $transMenu: 0.5s;
     @media (max-width: 576px) {
       width: 45vw;
       height: 25vw;
-      bottom: 5px;
+      bottom: 0;
     }
     .title{
       position: relative;
