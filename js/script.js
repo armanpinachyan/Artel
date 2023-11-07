@@ -186,8 +186,8 @@ $('.accordion-header').on('click', function (){
 
 //.... Slider
 
-const left_btn = document.querySelector('.left-btn')
-const right_btn = document.querySelector('.right-btn')
+const left_btn = document.querySelector('#left-btn')
+const right_btn = document.querySelector('#right-btn')
 
 
 left_btn.addEventListener('click', ()=>{
