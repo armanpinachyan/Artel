@@ -58,7 +58,7 @@ const headerSlider = [
 
 
 headerSlider.forEach((sliderItem, index) => {
-    $('.header-image').append(`<img id="header_slide_${index}" src="${sliderItem.url}" class="${index === 0 ? 'opacity-1' : 'opacity-0'}"  alt="haeder">`)
+    $('.header-image').append(`<img width="100%" height="100%" id="header_slide_${index}" src="${sliderItem.url}" class="${index === 0 ? 'opacity-1' : 'opacity-0'}"  alt="haeder">`)
     $('.header-info-top-buttons').append(
       `<div class="me-1 btn-loading">
         ${sliderItem.name}
@@ -71,27 +71,6 @@ headerSlider.forEach((sliderItem, index) => {
     }
 })
 
-// let sliderActiveIndex = 0;
-//
-// setInterval(() => {
-//     const navigateButtons = $('.header-info-top-buttons .btn-loading');
-//
-//     changeSlider(sliderActiveIndex)
-//     if(sliderActiveIndex === headerSlider.length - 1){
-//         sliderActiveIndex = 0;
-//         navigateButtons.removeClass('active_loading')
-//     } else {
-//         sliderActiveIndex++;
-//     }
-//     // if(sliderActiveIndex === -1){
-//     //     setTimeout(() => {
-//     //         navigateButtons.removeClass('active_loading');
-//     //       //  $(navigateButtons.get(0)).addClass('active_loading')
-//     //     }, 2500)
-//     // }
-//     // sliderActiveIndex++;
-//
-// }, 2000)
 
 
 let activeIndex = 0;
@@ -148,9 +127,6 @@ function changeSlider(activeIndex){
     $(`#header_slide_${activeIndex}`).removeClass('opacity-0').addClass('opacity-1');
 
 
-    // navigateButtons.removeClass(active)
-    // $(navigateButtons.get(activeIndex)).addClass(active)
-
 }
 
 
@@ -191,15 +167,6 @@ ScrollTrigger.create({
 
 
 
-// $(window).on('load', function (){
-//     const Works = $('#works').offset().top;
-//     ScrollTrigger.create({
-//         start: `top -${Works}`,
-//         end: 8000,
-//         toggleClass: {className: 'nav-works', targets: '.menu '},
-//     });
-//
-// })
 
 
 //. ...Accordion btn
@@ -338,11 +305,7 @@ ScrollTrigger.create({
 
         const secPercent = (secLeft * percent) / 100;
 
-        // $('#works').css({
-        //     'transform': `translateX(-${percent}vw)`,
-        //     left: `-${secLeft - secPercent}px`,
-        //     top: `${200 - (200 * percent) / 100}px`,
-        // })
+
 
     }
 });
