@@ -322,10 +322,12 @@ ScrollTrigger.create({
 
         stepsHeading1.css({
             'transform': `translateX(${50 - (50 * percent / 100)}%)`,
+            'opacity': `${0 + e.progress}`,
         });
 
         stepsHeading2.css({
             'transform': `translateX(${30 - (30 * percent / 100)}%)`,
+            'opacity': `${0 + e.progress}`,
         });
 
         if(percent > 80){
