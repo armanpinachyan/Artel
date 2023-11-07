@@ -1706,6 +1706,7 @@ $transMenu: 0.5s;
     left: -650px;
     top: 200px;
     margin-bottom: 3.75rem;
+    transition: .4s linear;
     &-heading{
       color: #464441;
       font-size: 4.5rem;
@@ -1716,6 +1717,7 @@ $transMenu: 0.5s;
       opacity: 0;
       position: relative;
       left: -400px;
+      transition: .4s linear;
       @media (max-width: 768px) {
         margin-bottom: 6rem;
         font-size: 3rem;

@@ -1694,6 +1694,7 @@ body {
   left: -650px;
   top: 200px;
   margin-bottom: 3.75rem;
+  transition: 0.4s linear;
 }
 .works-box .works-heading {
   color: #464441;
@@ -1705,6 +1706,7 @@ body {
   opacity: 0;
   position: relative;
   left: -400px;
+  transition: 0.4s linear;
 }
 @media (max-width: 768px) {
   .works-box .works-heading {
