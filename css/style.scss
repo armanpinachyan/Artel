@@ -1214,7 +1214,7 @@ $transMenu: 0.5s;
         }
       }
       .btn-inner2-blue{
-        @media (max-width: 400px) {
+        @media (max-width: 420px) {
           display: none;
         }
       }
@@ -1885,6 +1885,7 @@ $transMenu: 0.5s;
   &-box1{
     @media (max-width: 992px) {
       height: 300px !important;
+      justify-content: start !important;
     }
   }
   &-box{
