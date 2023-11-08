@@ -231,7 +231,15 @@ function ChangeSlider(numStatus){
 
 }
 
-
+const SwitchA = document.querySelector('.switch-planning a')
+const Switch = document.querySelector('.switch-planning input')
+Switch.addEventListener('change', (e)=>{
+    if(!e.currentTarget.checked){
+        SwitchA.innerHTML = ''
+    } else {
+        SwitchA.innerHTML = 'Фото'
+    }
+})
 
 // team
 
