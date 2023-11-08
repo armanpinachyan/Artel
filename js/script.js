@@ -36,29 +36,39 @@ function checkPositionCall(){
 const headerSlider = [
     {
         name: "частные дома",
-        url: "images/header-bg.png"
+        url: "images/header-bg.png",
+        width: '1440',
+        height: '880'
     },
     {
         name: "банные комплексы ",
         url: "images/header-img-1.jpg",
+        width: '1920',
+        height: '1920'
     },
     {
         name: "беседки",
-        url: "images/header-img-2.jpg"
+        url: "images/header-img-2.jpg",
+        width: '1920',
+        height: '2203'
     },
     {
         name: "гаражи",
-        url: "images/header-img-3.jpg"
+        url: "images/header-img-3.jpg",
+        width: '1920',
+        height: '2560',
     },
     {
         name: "пространства",
-        url: "images/header-img-4.jpg"
+        url: "images/header-img-4.jpg",
+        width: '1920',
+        height: '1280'
     }
 ]
 
 
 headerSlider.forEach((sliderItem, index) => {
-    $('.header-image').append(`<img width="100%" height="100%" id="header_slide_${index}" src="${sliderItem.url}" class="${index === 0 ? 'opacity-1' : 'opacity-0'}"  alt="haeder">`)
+    $('.header-image').append(`<img width=${sliderItem.width} height=${sliderItem.height} id="header_slide_${index}" src="${sliderItem.url}" class="${index === 0 ? 'opacity-1' : 'opacity-0'}"  alt="haeder">`)
     $('.header-info-top-buttons').append(
       `<div class="me-1 btn-loading">
         ${sliderItem.name}
