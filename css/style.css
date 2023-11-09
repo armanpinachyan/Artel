@@ -1309,18 +1309,13 @@ body {
 }
 @media (max-width: 576px) {
   .header-info-top h3 {
-    font-size: 9px;
+    display: none;
   }
 }
 .header-info-top-buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-@media (max-width: 576px) {
-  .header-info-top-buttons {
-    display: none;
-  }
 }
 .header-info-top-buttons .btn-loading {
   cursor: pointer;
@@ -1348,6 +1343,17 @@ body {
 @media (max-width: 576px) {
   .header-info-top-buttons .btn-loading {
     font-size: 9px;
+  }
+}
+@media (max-width: 475px) {
+  .header-info-top-buttons .btn-loading {
+    font-size: 8px;
+    padding: 0.2rem 0.5rem 0.12rem 0.5rem;
+  }
+}
+@media (max-width: 425px) {
+  .header-info-top-buttons .btn-loading {
+    font-size: 7px;
   }
 }
 .header-info-top-buttons .btn-loading .loading {
@@ -1388,6 +1394,17 @@ body {
 @media (max-width: 576px) {
   .header-info-top-buttons .btn-loading .loading {
     font-size: 9px;
+  }
+}
+@media (max-width: 475px) {
+  .header-info-top-buttons .btn-loading .loading {
+    font-size: 8px;
+    padding: 0.2rem 0 0.12rem 0;
+  }
+}
+@media (max-width: 425px) {
+  .header-info-top-buttons .btn-loading .loading {
+    font-size: 7px;
   }
 }
 .header-info-top .icon-phone {
@@ -2720,15 +2737,16 @@ body {
   margin-top: 112px;
 }
 #our-command .panel2-heading, .team .panel2-heading {
-  position: absolute;
-  left: 50%;
-  top: 37%;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
+  margin-top: 18rem;
+  text-align: center;
+  transform: translateY(50%);
+}
+@media (max-width: 768px) {
+  #our-command .panel2-heading, .team .panel2-heading {
+    margin-top: 10rem;
+  }
 }
 #our-command .panel2-row, .team .panel2-row {
-  margin-top: 288px;
   margin-bottom: 4rem;
   position: relative;
 }
