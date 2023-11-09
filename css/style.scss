@@ -174,13 +174,26 @@ body {
 }
 
 .dropdown-item{
-  &:active{
-    background: #464441 !important;
-    color: #fff !important;
-  }
+  color: #464441;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 18px; /* 128.571% */
+  text-transform: uppercase;
+  //&:active{
+  //  background: #464441 !important;
+  //  color: #fff !important;
+  //}
   &:hover{
     background: #464441 !important;
     color: #fff !important;
+  }
+  &:active{
+    background: #d5d9e0 !important;
+    color: #464441 !important;
+  }
+  &:focus{
+    background: #d5d9e0;
+    color: #464441;
   }
 }
 
@@ -761,12 +774,14 @@ $transMenu: 0.5s;
               }
               a{
                 padding-left: 2px;
+                padding-top: 2px;
                 color: #FFF;
                 text-align: center;
                 font-size: 14px;
                 font-style: normal;
                 font-weight: 600;
                 line-height: 18px; /* 128.571% */
+                text-transform: uppercase;
               }
               border: 1px solid #ECEFF3;
               background: rgba(236, 239, 243, 0.16);
@@ -1474,13 +1489,14 @@ $transMenu: 0.5s;
     margin-top: 5rem;
   }
   @media (max-width: 576px) {
-    margin-bottom: 7rem;
+    margin-bottom: 6rem;
     margin-top: 5rem;
   }
 
   &-container{
     @media (max-width: 992px) {
       overflow-x: auto;
+      overflow-y: hidden;
     }
     
     &::-webkit-scrollbar {
@@ -1700,8 +1716,11 @@ $transMenu: 0.5s;
       -ms-flex-align: center;
       align-items: center;
       margin-top: 11rem;
-      @media (max-width: 576px) {
+      @media (max-width: 768px) {
         margin-top: 8rem;
+      }
+      @media (max-width: 576px) {
+        margin-top: 5.5rem;
       }
       span{
         color: rgba(70, 68, 65, 0.60);
@@ -1744,6 +1763,7 @@ $transMenu: 0.5s;
         line-height: 90%;
       }
       @media (max-width: 576px) {
+        margin-bottom: 5rem;
         transition: .4s linear;
       }
       span{
@@ -1754,7 +1774,7 @@ $transMenu: 0.5s;
     &-heading2{
       margin: 10rem 0;
       @media (max-width: 768px) {
-        margin: 6rem 0;
+        margin: 5rem 0;
       }
     }
 
@@ -2098,13 +2118,14 @@ $transMenu: 0.5s;
     margin-top: 7rem;
   }
   @media (max-width: 576px) {
-    margin-bottom: 7rem;
+    margin-bottom: 3rem;
     margin-top: 5rem;
   }
 
   &-container{
     @media (max-width: 992px) {
       overflow-x: auto;
+      overflow-y: hidden;
     }
     &::-webkit-scrollbar {
       width: 5px;
@@ -2257,7 +2278,9 @@ $transMenu: 0.5s;
 
 .steps{
   margin-bottom: 7rem;
-
+  @media (max-width: 576px) {
+    margin-bottom: 3rem;
+  }
 
   &-title{
     color: #464441;
@@ -2295,6 +2318,9 @@ $transMenu: 0.5s;
     transform: translateX(80%);
     position: relative;
     transition: .3s linear;
+    @media (max-width: 576px) {
+       margin-top: 2.8rem;
+    }
     &-item{
       display: -webkit-box;
       display: -ms-flexbox;

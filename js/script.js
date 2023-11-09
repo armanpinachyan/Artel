@@ -384,12 +384,23 @@ ScrollTrigger.create({
 
 const modal_links = document.querySelectorAll('#modal-links a')
 const modal_menu_buttons = document.querySelectorAll('#modal-menu-buttons button')
+const dropDownItem = document.querySelectorAll('.dropdown-item')
 
 const modal_menu = new bootstrap.Modal(document.getElementById('modal-menu'), {
     keyboard: false
 })
 const modal_project = new bootstrap.Modal(document.getElementById('modal-project'), {
     keyboard: false
+})
+const modal_slider = new bootstrap.Modal(document.getElementById('modal-slider'), {
+    keyboard: false
+})
+
+dropDownItem.forEach((item) =>{
+    item.addEventListener('click', ()=>{
+        modal_slider.hide()
+
+    })
 })
 
 
