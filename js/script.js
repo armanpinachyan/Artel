@@ -155,18 +155,6 @@ $(window).on('load', function () {
         img.src = url;
         img.onload = () => console.log('loaded')
     })
-    const Services = $('#services').offset().top
-    ScrollTrigger.create({
-        trigger: "#services",
-        start: `top top`,
-        end: 20,
-        onEnter: () => {
-            menu.removeClass('nav-works')
-        },
-        onEnterBack: () => {
-            menu.addClass('nav-works')
-        }
-    });
 })
 
 ScrollTrigger.create({
@@ -174,6 +162,7 @@ ScrollTrigger.create({
     end: 99999,
     toggleClass: {className: 'nav--fixed', targets: '.menu '},
 });
+
 
 
 
@@ -259,6 +248,7 @@ ScrollTrigger.create({
     pin: true,
     onUpdate: function (e){
         const percent = +(e.progress * 100).toFixed();
+        const windowWidth = $(window).width();
 
         ourWork.css('opacity', (0.7 - e.progress));
         worksColBoxText.css('opacity', (0.7 - e.progress));
@@ -273,7 +263,7 @@ ScrollTrigger.create({
         $('#works').css({
             'transform': `translateX(-${percent}vw)`,
             left: `-${secLeft - secPercent}px`,
-            top: `${200 - (200 * percent) / 100}px`,
+            top: windowWidth > 576 ? `${200 - (200 * percent) / 100}px` : 0,
         })
 
         if(percent >= 99){
@@ -281,6 +271,18 @@ ScrollTrigger.create({
         } else {
             menu.removeClass('nav-works')
         }
+    }
+});
+
+ScrollTrigger.create({
+    trigger: "#services",
+    start: `top top`,
+    end: 20,
+    onEnter: () => {
+        menu.removeClass('nav-works')
+    },
+    onEnterBack: () => {
+        menu.addClass('nav-works')
     }
 });
 

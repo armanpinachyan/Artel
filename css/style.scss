@@ -1755,9 +1755,7 @@ $transMenu: 0.5s;
     left: -650px;
     top: 200px;
     margin-bottom: 3.75rem;
-    @media (max-width: 576px) {
-      transition: .4s linear;
-    }
+
     &-heading{
       color: #464441;
       font-size: 4.5rem;
@@ -1775,11 +1773,14 @@ $transMenu: 0.5s;
       }
       @media (max-width: 576px) {
         margin-bottom: 5rem;
-        transition: .4s linear;
+        transition: 0.3s;
       }
       span{
         color: rgba(70, 68, 65, 0.16);
       }
+    }
+    .row{
+      transition: 0.3s;
     }
 
     &-heading2{
@@ -1934,6 +1935,10 @@ $transMenu: 0.5s;
       height: 300px !important;
       justify-content: start !important;
     }
+    @media (max-width: 576px) {
+      height: 200px !important;
+      justify-content: start !important;
+    }
   }
   &-box{
     width: 100%;
@@ -1942,8 +1947,10 @@ $transMenu: 0.5s;
     overflow-x: hidden;
     padding-right: 20px;
     @media (max-width: 576px) {
-      height: 500px;
+      height: auto;
+      overflow: hidden;
       justify-content: start !important;
+      padding-right: 0;
     }
     &::-webkit-scrollbar {
       width: 5px;

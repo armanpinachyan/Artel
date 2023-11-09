@@ -1757,11 +1757,6 @@ body {
   top: 200px;
   margin-bottom: 3.75rem;
 }
-@media (max-width: 576px) {
-  .works-box .works {
-    transition: 0.4s linear;
-  }
-}
 .works-box .works-heading {
   color: #464441;
   font-size: 4.5rem;
@@ -1783,11 +1778,14 @@ body {
 @media (max-width: 576px) {
   .works-box .works-heading {
     margin-bottom: 5rem;
-    transition: 0.4s linear;
+    transition: 0.3s;
   }
 }
 .works-box .works-heading span {
   color: rgba(70, 68, 65, 0.16);
+}
+.works-box .works .row {
+  transition: 0.3s;
 }
 .works-box .works-heading2 {
   margin: 10rem 0;
@@ -1943,6 +1941,12 @@ body {
     justify-content: start !important;
   }
 }
+@media (max-width: 576px) {
+  .services-box1 {
+    height: 200px !important;
+    justify-content: start !important;
+  }
+}
 .services-box {
   width: 100%;
   height: 600px;
@@ -1952,8 +1956,10 @@ body {
 }
 @media (max-width: 576px) {
   .services-box {
-    height: 500px;
+    height: auto;
+    overflow: hidden;
     justify-content: start !important;
+    padding-right: 0;
   }
 }
 .services-box::-webkit-scrollbar {
