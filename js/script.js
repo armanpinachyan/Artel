@@ -260,8 +260,8 @@ ScrollTrigger.create({
     onUpdate: function (e){
         const percent = +(e.progress * 100).toFixed();
 
-        ourWork.css('opacity', (1 - e.progress));
-        worksColBoxText.css('opacity', (1 - e.progress));
+        ourWork.css('opacity', (0.7 - e.progress));
+        worksColBoxText.css('opacity', (0.7 - e.progress));
 
         worksHeading.css({
             'opacity': e.progress,
@@ -299,7 +299,7 @@ ScrollTrigger.create({
     onUpdate: function (e){
         const percent = +(e.progress * 100).toFixed();
 
-        stepsTitle.css('opacity', (1 - e.progress));
+        stepsTitle.css('opacity', (0.7 - e.progress));
         stepsBloc.css({
             'opacity': `${0 + e.progress}`,
             'transform': `translateX(${80 - (80 * percent / 100)}%)`,

@@ -1807,10 +1807,8 @@ $transMenu: 0.5s;
       }
       &-text{
         position: absolute;
-        top: -9.8125rem;
-        @media (max-width: 992px) {
-          top: -6rem;
-        }
+        right: 0;
+        bottom: 50px;
         p{
           max-width: 280px;
           width: 100%;
