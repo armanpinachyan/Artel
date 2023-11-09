@@ -2485,7 +2485,7 @@ body {
   justify-content: center;
 }
 
-#team #panels-container {
+#our-command {
   background: -o-linear-gradient(342deg, #304F35 0%, #397343 98.74%) !important;
   background: linear-gradient(108deg, #304F35 0%, #397343 98.74%) !important;
   height: auto;
@@ -2498,7 +2498,7 @@ body {
   overflow: hidden;
 }
 
-#team #panels-container .panel {
+#our-command .panel {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -2510,12 +2510,12 @@ body {
   border: 0;
 }
 @media (max-width: 576px) {
-  #team #panels-container .panel {
+  #our-command .panel {
     height: 93vh;
   }
 }
 
-#team #panels-container2 {
+#our-command {
   background: -o-linear-gradient(342deg, #304F35 0%, #397343 98.74%) !important;
   background: linear-gradient(108deg, #304F35 0%, #397343 98.74%) !important;
   height: auto;
@@ -2529,7 +2529,7 @@ body {
   border: 0;
 }
 
-#team #panels-container2 .panel {
+#our-command .panel {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -2541,7 +2541,7 @@ body {
   border: 0;
 }
 @media (max-width: 576px) {
-  #team #panels-container2 .panel {
+  #our-command .panel {
     height: 100vh;
   }
 }
@@ -2553,28 +2553,28 @@ body {
   overflow: hidden;
 }
 
-.team-image {
+#our-command-image, .team-image {
   position: absolute;
 }
-.team-image img {
+#our-command-image img, .team-image img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
 }
-.team .image-left {
+#our-command .image-left, .team .image-left {
   left: 0;
   top: 0;
   width: 17vw;
   height: 12vw;
 }
 @media (max-width: 576px) {
-  .team .image-left {
+  #our-command .image-left, .team .image-left {
     width: 30vw;
     height: 22vw;
   }
 }
-.team .image-left .img2 {
+#our-command .image-left .img2, .team .image-left .img2 {
   position: absolute;
   width: 20vw;
   height: 15vw;
@@ -2583,54 +2583,54 @@ body {
   top: 80%;
 }
 @media (max-width: 576px) {
-  .team .image-left .img2 {
+  #our-command .image-left .img2, .team .image-left .img2 {
     width: 30vw;
     height: 22vw;
   }
 }
-.team .image-left-bottom {
+#our-command .image-left-bottom, .team .image-left-bottom {
   left: 0;
   bottom: 45px;
   width: 25vw;
   height: 14vw;
 }
 @media (max-width: 576px) {
-  .team .image-left-bottom {
+  #our-command .image-left-bottom, .team .image-left-bottom {
     width: 35vw;
     height: 28vw;
     bottom: 0;
   }
 }
-.team .image-right {
+#our-command .image-right, .team .image-right {
   right: 0;
   top: 0;
   width: 25vw;
   height: 17vw;
 }
 @media (max-width: 576px) {
-  .team .image-right {
+  #our-command .image-right, .team .image-right {
     width: 40vw;
     height: 28vw;
   }
 }
-.team .image-right .img {
+#our-command .image-right .img, .team .image-right .img {
   position: absolute;
   right: 0;
 }
-.team .image-right-bottom {
+#our-command .image-right-bottom, .team .image-right-bottom {
   right: 0;
   bottom: 20px;
   width: 29vw;
   height: 11vw;
 }
 @media (max-width: 576px) {
-  .team .image-right-bottom {
+  #our-command .image-right-bottom, .team .image-right-bottom {
     width: 45vw;
     height: 25vw;
     bottom: 0;
   }
 }
-.team .image-right-bottom .title {
+#our-command .image-right-bottom .title, .team .image-right-bottom .title {
   position: relative;
   left: 20%;
   top: -85px;
@@ -2644,26 +2644,26 @@ body {
   width: 100%;
 }
 @media (max-width: 1024px) {
-  .team .image-right-bottom .title {
+  #our-command .image-right-bottom .title, .team .image-right-bottom .title {
     left: 20%;
     top: -50px;
     font-size: 0.7rem;
   }
 }
 @media (max-width: 576px) {
-  .team .image-right-bottom .title {
+  #our-command .image-right-bottom .title, .team .image-right-bottom .title {
     left: 24%;
     top: -40px;
     max-width: 10rem;
     font-size: 0.5rem;
   }
 }
-.team .image-right-bottom .img {
+#our-command .image-right-bottom .img, .team .image-right-bottom .img {
   position: absolute;
   right: 0;
   bottom: 0;
 }
-.team .image-right-bottom .img2 {
+#our-command .image-right-bottom .img2, .team .image-right-bottom .img2 {
   position: absolute;
   width: 11vw;
   height: 11vw;
@@ -2672,18 +2672,18 @@ body {
   z-index: -1;
 }
 @media (max-width: 1024px) {
-  .team .image-right-bottom .img2 {
+  #our-command .image-right-bottom .img2, .team .image-right-bottom .img2 {
     left: -60px;
     bottom: -15px;
   }
 }
 @media (max-width: 576px) {
-  .team .image-right-bottom .img2 {
+  #our-command .image-right-bottom .img2, .team .image-right-bottom .img2 {
     width: 22vw;
     height: 22vw;
   }
 }
-.team .heading-box {
+#our-command .heading-box, .team .heading-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2696,11 +2696,11 @@ body {
   text-align: center;
   margin: 0 auto;
 }
-.team .panel2 {
+#our-command .panel2, .team .panel2 {
   height: auto !important;
   overflow: unset !important;
 }
-.team .panel2-title {
+#our-command .panel2-title, .team .panel2-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2719,32 +2719,29 @@ body {
   width: 100%;
   margin-top: 112px;
 }
-.team .panel2-heading {
+#our-command .panel2-heading, .team .panel2-heading {
   position: absolute;
   left: 50%;
   top: 37%;
   -webkit-transform: translateX(-50%) translateY(-50%);
   -ms-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  z-index: -1;
 }
-.team .panel2-heading .heading {
-  opacity: 0.04;
-}
-.team .panel2-row {
+#our-command .panel2-row, .team .panel2-row {
   margin-top: 288px;
   margin-bottom: 4rem;
+  position: relative;
 }
-.team .panel2-col-box .image {
+#our-command .panel2-col-box .image, .team .panel2-col-box .image {
   height: 250px;
 }
-.team .panel2-col-box .image img {
+#our-command .panel2-col-box .image img, .team .panel2-col-box .image img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
 }
-.team .panel2-col-box .text h4 {
+#our-command .panel2-col-box .text h4, .team .panel2-col-box .text h4 {
   color: #FFF;
   font-size: 14px;
   font-weight: 500;
@@ -2752,13 +2749,13 @@ body {
   text-transform: uppercase;
   margin-bottom: 0;
 }
-.team .panel2-col-box .text span {
+#our-command .panel2-col-box .text span, .team .panel2-col-box .text span {
   color: rgba(255, 255, 255, 0.4);
   font-size: 16px;
   font-weight: 400;
   line-height: 22px; /* 137.5% */
 }
-.team .panel3-image {
+#our-command .panel3-image, .team .panel3-image {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -2766,7 +2763,7 @@ body {
   width: 100%;
   position: relative;
 }
-.team .panel3-image .head-box {
+#our-command .panel3-image .head-box, .team .panel3-image .head-box {
   position: absolute;
   left: 0;
   top: 0;
@@ -2785,10 +2782,10 @@ body {
   -ms-transform: translateX(97%);
   transform: translateX(97%);
 }
-.team .panel3-image .head-box .heading {
+#our-command .panel3-image .head-box .heading, .team .panel3-image .head-box .heading {
   white-space: nowrap;
 }
-.team .panel3-image .button {
+#our-command .panel3-image .button, .team .panel3-image .button {
   opacity: 0;
   transition: 0.3s;
   position: absolute;
@@ -2806,7 +2803,7 @@ body {
   width: 100%;
   height: 100%;
 }
-.team .panel3-image .button button {
+#our-command .panel3-image .button button, .team .panel3-image .button button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -330,51 +330,102 @@ ScrollTrigger.create({
 
 
 /* Main navigation */
-let panelsSection = document.querySelector("#panels"),
-  panelsContainer = document.querySelector("#panels-container"),
-  panelsContainer2 = document.querySelector("#panels-container2"),
-  panelsContainer2Panel = $("#panels-container #panel-2").offset().top,
-  tween;
-console.log(panelsContainer2Panel)
-
-const panels = gsap.utils.toArray("#panels-container .panel");
-tween = gsap.to(panels, {
-    xPercent: -100 * ( panels.length - 1 ),
-    ease: "none",
-    scrollTrigger: {
-        trigger: "#panels-container",
-        pin: true,
-        start: `top +${50}`,
-        scrub: 1,
-        snap: {
-            snapTo: 1 / (panels.length - 1),
-            inertia: false,
-            duration: {min: 0.1, max: 0.1}
-        },
-        end: () =>  "+=" + (panelsContainer.offsetWidth - innerWidth)
-    }
-});
+// let panelsSection = document.querySelector("#panels"),
+//   panelsContainer = document.querySelector("#panels-container"),
+//   panelsContainer2 = document.querySelector("#panels-container2"),
+//   panelsContainer2Panel = $("#panels-container #panel-2").offset().top,
+//   tween;
+//
+// const panels = gsap.utils.toArray("#panels-container .panel");
+// tween = gsap.to(panels, {
+//     xPercent: -100 * ( panels.length - 1 ),
+//     ease: "none",
+//     scrollTrigger: {
+//         trigger: "#panels-container",
+//         pin: true,
+//         start: `top +${50}`,
+//         scrub: 1,
+//         snap: {
+//             snapTo: 1 / (panels.length - 1),
+//             inertia: false,
+//             duration: {min: 0.1, max: 0.1}
+//         },
+//         end: () =>  "+=" + (panelsContainer.offsetWidth - innerWidth)
+//     }
+// });
 
 let fixHeading = 97;
 
+
+const panel2ColBox = $('.panel2-col-box');
+
+
 ScrollTrigger.create({
-    trigger: "#panels-container2",
+    trigger: "#our-command",
     start: `top top-=-64` ,
-    end: `top top-=5000`,
+    end: `top top-=2000`,
+    pin: true,
+    onUpdate: function (e){
+        const percent = +(e.progress * 100).toFixed();
+        changePositionOurCommand(percent)
+    }
+});
+
+changePositionOurCommand(0)
+
+
+function changePositionOurCommand(percent){
+    const heading = $('.panel2-heading')
+    const panel2Title = $('.panel2-title')
+    panel2ColBox.each((index, elem) => {
+        const elm = $(elem);
+        const title = elem.querySelector('h4');
+        const subTitle = elem.querySelector('span');
+        const getElemData = {
+            x: elm.data('positionx'),
+            y: elm.data('positiony')
+        }
+
+        if(percent >= 99){
+            title.style.opacity = 1;
+            subTitle.style.opacity = 1;
+        } else {
+            title.style.opacity = 0;
+            subTitle.style.opacity = 0;
+        }
+
+        const _y = getElemData.y - (getElemData.y * percent / 100);
+        const _x = getElemData.x - (getElemData.x * percent / 100);
+
+        elm.css('transform', `translateX(${_x}%) translateY(${_y}%)`);
+        const opacity = 1 - percent / 100;
+
+        panel2Title.css('opacity', percent / 100);
+
+        heading.css('opacity', opacity >= 0.4 ? opacity : 0.4);
+
+
+    })
+}
+
+
+ScrollTrigger.create({
+    trigger: "#team",
+    start: `top top-=-64` ,
+    end: `top top-=4000`,
     pin: true,
     onUpdate: function (e){
         const percent = +(e.progress * 100).toFixed();
 
-        $('#panels-container2 .head-box').css('transform', `translateX(${fixHeading - (percent * 3)}%)`);
+        $('#team .head-box').css('transform', `translateX(${fixHeading - (percent * 3)}%)`);
         if(percent >= 80){
-            $('#panels-container2 .button').css('opacity', 1);
+            $('#team .button').css('opacity', 1);
         } else {
-            $('#panels-container2 .button').css('opacity', 0);
+            $('#team .button').css('opacity', 0);
         }
         console.log(percent)
     }
 });
-
 
 //. team End
 
