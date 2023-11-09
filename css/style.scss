@@ -1329,6 +1329,7 @@ $transMenu: 0.5s;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
+        flex-wrap: wrap;
         .btn-loading{
           cursor: pointer;
           border-radius: 4px;
@@ -1346,6 +1347,7 @@ $transMenu: 0.5s;
           transition: 2s;
           position: relative;
           overflow: hidden;
+          margin-bottom: 5px;
           @media (max-width: 768px) {
             font-size: 11px;
           }
