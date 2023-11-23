@@ -294,47 +294,42 @@ ScrollTrigger.create({
 
 //.... Step
 
-const steps = $('#steps')
-const stepsTitle = $('#steps .steps-title')
-const stepsBloc = $('#steps .steps-bloc')
-const stepsHeading1 = $('#steps .steps-heading-1')
-const stepsHeading2 = $('#steps .steps-heading-2')
-ScrollTrigger.create({
-    trigger: "#steps",
-    start: `top top-=-200`,
-    end: `top top-=1500`,
-    pin: true,
-    onUpdate: function (e){
-        const percent = +(e.progress * 100).toFixed();
-
-        stepsTitle.css('opacity', (0.7 - e.progress));
-        stepsBloc.css({
-            'opacity': `${0 + e.progress}`,
-            'transform': `translateX(${80 - (80 * percent / 100)}%)`,
-        });
-
-        stepsHeading1.css({
-            'transform': `translateX(${50 - (50 * percent / 100)}%)`,
-            'opacity': `${0 + e.progress}`,
-        });
-
-        stepsHeading2.css({
-            'transform': `translateX(${30 - (30 * percent / 100)}%)`,
-            'opacity': `${0 + e.progress}`,
-        });
-
-        if(percent > 80){
-            $('.gradient').removeClass(none)
-        } else {
-            $('.gradient').addClass(none)
-        }
-
-        const secPercent = (secLeft * percent) / 100;
-
-
-
-    }
-});
+// ScrollTrigger.create({
+//     trigger: "#steps",
+//     start: `top top-=-200`,
+//     end: `top top-=1500`,
+//     pin: true,
+//     onUpdate: function (e){
+//         const percent = +(e.progress * 100).toFixed();
+//
+//         stepsTitle.css('opacity', (0.7 - e.progress));
+//         stepsBloc.css({
+//             'opacity': `${0 + e.progress}`,
+//             'transform': `translateX(${80 - (80 * percent / 100)}%)`,
+//         });
+//
+//         stepsHeading1.css({
+//             'transform': `translateX(${50 - (50 * percent / 100)}%)`,
+//             'opacity': `${0 + e.progress}`,
+//         });
+//
+//         stepsHeading2.css({
+//             'transform': `translateX(${30 - (30 * percent / 100)}%)`,
+//             'opacity': `${0 + e.progress}`,
+//         });
+//
+//         if(percent > 80){
+//             $('.gradient').removeClass(none)
+//         } else {
+//             $('.gradient').addClass(none)
+//         }
+//
+//         const secPercent = (secLeft * percent) / 100;
+//
+//
+//
+//     }
+// });
 
 
 /* Main navigation */
@@ -508,6 +503,54 @@ gsap.from(workBox, {
         onLeaveBack() {
             workBox.removeClass(active)
             menu.removeClass('nav-works')
+        }
+    }
+});
+
+
+
+const steps = $('#steps')
+const stepsTitle = $('#steps .steps-title')
+const stepsBloc = $('#steps .steps-bloc')
+const stepsHeading1 = $('#steps .steps-heading-1')
+const stepsHeading2 = $('#steps .steps-heading-2');
+
+//         const percent = +(e.progress * 100).toFixed();
+//
+//         stepsTitle.css('opacity', (0.7 - e.progress));
+//         stepsBloc.css({
+//             'opacity': `${0 + e.progress}`,
+//             'transform': `translateX(${80 - (80 * percent / 100)}%)`,
+//         });
+//
+//         stepsHeading1.css({
+//             'transform': `translateX(${50 - (50 * percent / 100)}%)`,
+//             'opacity': `${0 + e.progress}`,
+//         });
+//
+//         stepsHeading2.css({
+//             'transform': `translateX(${30 - (30 * percent / 100)}%)`,
+//             'opacity': `${0 + e.progress}`,
+//         });
+//
+//         if(percent > 80){
+//             $('.gradient').removeClass(none)
+//         } else {
+//             $('.gradient').addClass(none)
+//         }
+//         const secPercent = (secLeft * percent) / 100;
+//     }
+
+gsap.from(steps, {
+    scrollTrigger: {
+        start: 'top top-=-200',
+        end: 'bottom top',
+        trigger: steps,
+        onEnter() {
+            steps.addClass(active)
+        },
+        onLeaveBack() {
+            steps.removeClass(active)
         }
     }
 });

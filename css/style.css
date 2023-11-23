@@ -2312,6 +2312,17 @@ body {
     margin-bottom: 3rem;
   }
 }
+.steps.active .steps-heading-1, .steps.active .steps-heading-2 {
+  opacity: 1;
+  transform: translateX(0);
+}
+.steps.active .steps-bloc {
+  opacity: 1;
+  transform: translateX(0);
+}
+.steps.active .steps-title {
+  opacity: 0;
+}
 .steps-title {
   color: #464441;
   font-size: 16px;
@@ -2323,19 +2334,20 @@ body {
   position: absolute;
   left: 0;
   top: 30.5rem;
+  transition: 1s;
 }
 .steps-heading-1 {
   text-align: right;
   color: #464441;
   transform: translateX(50%);
-  transition: 0.3s linear;
+  transition: 1s;
   opacity: 0;
 }
 .steps-heading-2 {
   color: rgba(70, 68, 65, 0.16);
   text-align: right;
   transform: translateX(30%);
-  transition: 0.3s linear;
+  transition: 1s;
   opacity: 0;
 }
 .steps-bloc {
@@ -2343,7 +2355,7 @@ body {
   opacity: 0;
   transform: translateX(80%);
   position: relative;
-  transition: 0.3s linear;
+  transition: 1s;
 }
 @media (max-width: 576px) {
   .steps-bloc {
