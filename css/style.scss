@@ -1691,6 +1691,22 @@ $transMenu: 0.5s;
   -ms-flex-align: start;
   align-items: start;
 
+  &.active{
+    .works{
+      left: -100%;
+    }
+    .works-heading{
+      opacity: 1;
+      left: 0;
+    }
+    .our-work-inner{
+      opacity: 0;
+    }
+    .works-col-box-text{
+      opacity: 0;
+    }
+  }
+
   .our-work{
     min-width: 100vw;
     &-inner{
@@ -1707,6 +1723,7 @@ $transMenu: 0.5s;
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
       flex-direction: column;
+      transition: 1s;
     }
 
     &-head-box{
@@ -1757,6 +1774,7 @@ $transMenu: 0.5s;
     left: -650px;
     top: 200px;
     margin-bottom: 3.75rem;
+    transition: 1s;
 
     &-heading{
       color: #464441;
@@ -1768,6 +1786,7 @@ $transMenu: 0.5s;
       opacity: 0;
       position: relative;
       left: -400px;
+      transition: 1s;
       @media (max-width: 768px) {
         margin-bottom: 6rem;
         font-size: 3rem;
@@ -1797,6 +1816,7 @@ $transMenu: 0.5s;
       height: 100%;
       position: relative;
       cursor: pointer;
+      transition: 1s;
       &:hover{
       .plus{
         opacity: 1 !important;
@@ -1812,6 +1832,7 @@ $transMenu: 0.5s;
         position: absolute;
         right: 0;
         bottom: 50px;
+        transition: 1s;
         p{
           max-width: 280px;
           width: 100%;
@@ -1924,6 +1945,7 @@ $transMenu: 0.5s;
   background: -o-linear-gradient(339deg, #464441 19.52%, #5E5B57 100%);
   background: linear-gradient(111deg, #464441 19.52%, #5E5B57 100%);
   padding: 7rem 0;
+  margin-top: 150px;
   @media (max-width: 992px) {
     padding: 4rem 0;
   }

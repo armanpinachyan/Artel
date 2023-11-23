@@ -1692,6 +1692,19 @@ body {
   -ms-flex-align: start;
   align-items: start;
 }
+.works-box.active .works {
+  left: -100%;
+}
+.works-box.active .works-heading {
+  opacity: 1;
+  left: 0;
+}
+.works-box.active .our-work-inner {
+  opacity: 0;
+}
+.works-box.active .works-col-box-text {
+  opacity: 0;
+}
 .works-box .our-work {
   min-width: 100vw;
 }
@@ -1709,6 +1722,7 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  transition: 1s;
 }
 .works-box .our-work-head-box-head1 {
   color: rgba(70, 68, 65, 0.16);
@@ -1758,6 +1772,7 @@ body {
   left: -650px;
   top: 200px;
   margin-bottom: 3.75rem;
+  transition: 1s;
 }
 .works-box .works-heading {
   color: #464441;
@@ -1769,6 +1784,7 @@ body {
   opacity: 0;
   position: relative;
   left: -400px;
+  transition: 1s;
 }
 @media (max-width: 768px) {
   .works-box .works-heading {
@@ -1802,6 +1818,7 @@ body {
   height: 100%;
   position: relative;
   cursor: pointer;
+  transition: 1s;
 }
 .works-box .works-col-box:hover .plus {
   opacity: 1 !important;
@@ -1816,6 +1833,7 @@ body {
   position: absolute;
   right: 0;
   bottom: 50px;
+  transition: 1s;
 }
 .works-box .works-col-box-text p {
   max-width: 280px;
@@ -1923,6 +1941,7 @@ body {
   background: -o-linear-gradient(339deg, #464441 19.52%, #5E5B57 100%);
   background: linear-gradient(111deg, #464441 19.52%, #5E5B57 100%);
   padding: 7rem 0;
+  margin-top: 150px;
 }
 @media (max-width: 992px) {
   .services {

@@ -160,7 +160,7 @@ $(window).on('load', function () {
 ScrollTrigger.create({
     start: `top -${windowHeight - 50}`,
     end: 99999,
-    toggleClass: {className: 'nav--fixed', targets: '.menu '},
+    toggleClass: {className: 'nav--fixed', targets: '.menu'},
 });
 
 
@@ -241,38 +241,42 @@ const worksColBoxText = $('.works-col-box-text');
 const worksHeading = $('.works-heading');
 let secLeft = 650;
 
-ScrollTrigger.create({
-    trigger: "#works-box",
-    start: `top top-=-200`,
-    end: `top top-=1500`,
-    pin: true,
-    onUpdate: function (e){
-        const percent = +(e.progress * 100).toFixed();
-        const windowWidth = $(window).width();
 
-        ourWork.css('opacity', (0.7 - e.progress));
-        worksColBoxText.css('opacity', (0.7 - e.progress));
-
-        worksHeading.css({
-            'opacity': e.progress,
-            'left': `-${400 - (400 * percent) / 100}px`
-        });
-
-        const secPercent = (secLeft * percent) / 100;
-
-        $('#works').css({
-            'transform': `translateX(-${percent}vw)`,
-            left: `-${secLeft - secPercent}px`,
-            top: windowWidth > 576 ? `${200 - (200 * percent) / 100}px` : 0,
-        })
-
-        if(percent >= 99){
-            menu.addClass('nav-works')
-        } else {
-            menu.removeClass('nav-works')
-        }
-    }
-});
+// ScrollTrigger.create({
+//     trigger: "#works-box",
+//     start: `top top-=-200`,
+//     end: `top top-=1`,
+//     onUpdate: function (e){
+//
+//         if(e.progress === 1){
+//             console.log('ok')
+//         }
+//
+//
+//         //
+//         // ourWork.css('opacity', (0.7 - e.progress));
+//         // worksColBoxText.css('opacity', (0.7 - e.progress));
+//         //
+//         // worksHeading.css({
+//         //     'opacity': e.progress,
+//         //     'left': `-${400 - (400 * percent) / 100}px`
+//         // });
+//         //
+//         // const secPercent = (secLeft * percent) / 100;
+//         //
+//         // $('#works').css({
+//         //     'transform': `translateX(-${percent}vw)`,
+//         //     left: `-${secLeft - secPercent}px`,
+//         //     top: windowWidth > 576 ? `${200 - (200 * percent) / 100}px` : 0,
+//         // })
+//         //
+//         // if(percent >= 99){
+//         //     menu.addClass('nav-works')
+//         // } else {
+//         //     menu.removeClass('nav-works')
+//         // }
+//     }
+// });
 
 ScrollTrigger.create({
     trigger: "#services",
@@ -285,6 +289,8 @@ ScrollTrigger.create({
         menu.addClass('nav-works')
     }
 });
+
+
 
 //.... Step
 
@@ -487,3 +493,21 @@ $(window).on('scroll', function (){
         }
     })
 })
+
+const workBox = $('#works-box')
+gsap.from(workBox, {
+    scrollTrigger: {
+        start: 'top top-=-200',
+        end: 'bottom top',
+        trigger: workBox,
+        onEnter() {
+            workBox.addClass(active)
+             menu.addClass('nav-works')
+
+        },
+        onLeaveBack() {
+            workBox.removeClass(active)
+            menu.removeClass('nav-works')
+        }
+    }
+});
