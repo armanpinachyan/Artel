@@ -9,7 +9,7 @@ const {
     none: 'd-none'
 }
 
-AOS.init();
+
 
 
 const windowHeight = $(window).height();
@@ -155,6 +155,7 @@ $(window).on('load', function () {
         img.src = url;
         img.onload = () => console.log('loaded')
     })
+    AOS.init();
 })
 
 ScrollTrigger.create({
@@ -163,7 +164,20 @@ ScrollTrigger.create({
     toggleClass: {className: 'nav--fixed', targets: '.menu'},
 });
 
-
+const yourDreamContainer = $('#your-dream-container')
+gsap.from(yourDreamContainer, {
+    scrollTrigger: {
+        start: 'top top-=-150',
+        end: 'bottom top',
+        trigger: yourDreamContainer,
+        onEnter() {
+            yourDreamContainer.scrollLeft(500)
+        },
+        onLeaveBack() {
+            yourDreamContainer.scrollLeft(0)
+        }
+    }
+});
 
 
 
@@ -232,6 +246,24 @@ Switch.addEventListener('change', (e)=>{
 
 // team
 
+const engagedBusinessContainer = $('#engaged-business-container')
+gsap.from(engagedBusinessContainer, {
+    scrollTrigger: {
+        start: 'top top-=-200',
+        end: 'bottom top',
+        trigger: engagedBusinessContainer,
+        onEnter() {
+            console.log(55)
+            engagedBusinessContainer.scrollLeft(500)
+        },
+        onLeaveBack() {
+            console.log(44)
+            engagedBusinessContainer.scrollLeft(0)
+        }
+    }
+});
+
+
 gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
 
@@ -242,41 +274,6 @@ const worksHeading = $('.works-heading');
 let secLeft = 650;
 
 
-// ScrollTrigger.create({
-//     trigger: "#works-box",
-//     start: `top top-=-200`,
-//     end: `top top-=1`,
-//     onUpdate: function (e){
-//
-//         if(e.progress === 1){
-//             console.log('ok')
-//         }
-//
-//
-//         //
-//         // ourWork.css('opacity', (0.7 - e.progress));
-//         // worksColBoxText.css('opacity', (0.7 - e.progress));
-//         //
-//         // worksHeading.css({
-//         //     'opacity': e.progress,
-//         //     'left': `-${400 - (400 * percent) / 100}px`
-//         // });
-//         //
-//         // const secPercent = (secLeft * percent) / 100;
-//         //
-//         // $('#works').css({
-//         //     'transform': `translateX(-${percent}vw)`,
-//         //     left: `-${secLeft - secPercent}px`,
-//         //     top: windowWidth > 576 ? `${200 - (200 * percent) / 100}px` : 0,
-//         // })
-//         //
-//         // if(percent >= 99){
-//         //     menu.addClass('nav-works')
-//         // } else {
-//         //     menu.removeClass('nav-works')
-//         // }
-//     }
-// });
 
 ScrollTrigger.create({
     trigger: "#services",
@@ -366,7 +363,7 @@ const panel2ColBox = $('.panel2-col-box');
 ScrollTrigger.create({
     trigger: "#our-command",
     start: `top top-=-64` ,
-    end: `top top-=2000`,
+    end: `top top-=1000`,
     pin: true,
     onUpdate: function (e){
         const percent = +(e.progress * 100).toFixed();
@@ -515,31 +512,6 @@ const stepsBloc = $('#steps .steps-bloc')
 const stepsHeading1 = $('#steps .steps-heading-1')
 const stepsHeading2 = $('#steps .steps-heading-2');
 
-//         const percent = +(e.progress * 100).toFixed();
-//
-//         stepsTitle.css('opacity', (0.7 - e.progress));
-//         stepsBloc.css({
-//             'opacity': `${0 + e.progress}`,
-//             'transform': `translateX(${80 - (80 * percent / 100)}%)`,
-//         });
-//
-//         stepsHeading1.css({
-//             'transform': `translateX(${50 - (50 * percent / 100)}%)`,
-//             'opacity': `${0 + e.progress}`,
-//         });
-//
-//         stepsHeading2.css({
-//             'transform': `translateX(${30 - (30 * percent / 100)}%)`,
-//             'opacity': `${0 + e.progress}`,
-//         });
-//
-//         if(percent > 80){
-//             $('.gradient').removeClass(none)
-//         } else {
-//             $('.gradient').addClass(none)
-//         }
-//         const secPercent = (secLeft * percent) / 100;
-//     }
 
 gsap.from(steps, {
     scrollTrigger: {

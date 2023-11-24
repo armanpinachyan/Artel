@@ -1276,8 +1276,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   -webkit-box-align: end;
   -ms-flex-align: end;
@@ -1288,8 +1286,7 @@ body {
 }
 @media (max-width: 576px) {
   .header-info-top {
-    -webkit-box-align: center;
-    -ms-flex-align: center;
+    justify-content: center;
     align-items: center;
     padding-bottom: 1.1rem;
   }
@@ -1409,6 +1406,11 @@ body {
     font-size: 7px;
   }
 }
+@media (max-width: 576px) {
+  .header-info-top #icon-phone-back {
+    display: none;
+  }
+}
 .header-info-top .icon-phone {
   width: 60px;
   height: 60px;
@@ -1433,6 +1435,10 @@ body {
   .header-info-top .icon-phone {
     width: 40px;
     height: 40px;
+    right: 20px;
+    bottom: 140px;
+    left: unset !important;
+    top: unset !important;
   }
 }
 .header-info-top .icon-phone div {

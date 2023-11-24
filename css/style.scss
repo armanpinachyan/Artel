@@ -1296,8 +1296,6 @@ $transMenu: 0.5s;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
       justify-content: space-between;
       -webkit-box-align: end;
       -ms-flex-align: end;
@@ -1306,8 +1304,7 @@ $transMenu: 0.5s;
       border-bottom: 1px solid rgba(255, 255, 255, 0.40);
       padding-bottom: 1.5rem;
       @media (max-width: 576px) {
-        -webkit-box-align: center;
-        -ms-flex-align: center;
+        justify-content: center;
         align-items: center;
         padding-bottom: 1.1rem;
       }
@@ -1407,6 +1404,11 @@ $transMenu: 0.5s;
         }
 
       }
+      #icon-phone-back{
+        @media (max-width: 576px) {
+         display: none;
+        }
+      }
       .icon-phone{
         width: 60px;
         height: 60px;
@@ -1429,6 +1431,10 @@ $transMenu: 0.5s;
         @media (max-width: 576px) {
           width: 40px;
           height: 40px;
+          right: 20px;
+          bottom: 140px;
+          left: unset !important;
+          top: unset !important;
         }
         div{
           width: 52px;
