@@ -1436,6 +1436,9 @@ $transMenu: 0.5s;
           left: unset !important;
           top: unset !important;
         }
+        @media (max-width: 475px) {
+          bottom: 110px;
+        }
         div{
           width: 52px;
           height: 52px;

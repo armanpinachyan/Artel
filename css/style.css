@@ -1441,6 +1441,11 @@ body {
     top: unset !important;
   }
 }
+@media (max-width: 475px) {
+  .header-info-top .icon-phone {
+    bottom: 110px;
+  }
+}
 .header-info-top .icon-phone div {
   width: 52px;
   height: 52px;

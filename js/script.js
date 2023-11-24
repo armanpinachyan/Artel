@@ -167,7 +167,7 @@ ScrollTrigger.create({
 const yourDreamContainer = $('#your-dream-container')
 gsap.from(yourDreamContainer, {
     scrollTrigger: {
-        start: 'top top-=-150',
+        start: 'top top-=-200',
         end: 'bottom top',
         trigger: yourDreamContainer,
         onEnter() {
