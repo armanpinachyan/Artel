@@ -157,17 +157,17 @@ $(window).on('load', function () {
     })
     AOS.init();
 
-   const works_heading = $(".works-heading").offset().top;
-   const works_heading2 = $(".works-heading2").offset().top;
+   const works_heading = $(".work-head").offset().top;
+   const works_heading2 = $(".work-head2").offset().top;
     ScrollTrigger.create({
-        start: `top -${works_heading - 200}`,
+        start: `top -${works_heading - 250}`,
         end: 9999,
-        toggleClass: {className: 'active', targets: '.works-heading'},
+        toggleClass: {className: 'active', targets: '.work-head'},
     });
     ScrollTrigger.create({
-        start: `top -${works_heading2 - 200}`,
+        start: `top -${works_heading2 - 250}`,
         end: 9999,
-        toggleClass: {className: 'active', targets: '.works_heading2'},
+        toggleClass: {className: 'active', targets: '.work-head2'},
     });
 
 })

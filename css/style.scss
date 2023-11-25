@@ -1706,10 +1706,19 @@ $transMenu: 0.5s;
       left: -100%;
     }
     .works-heading{
-      opacity: .3;
       left: 0;
+    }
+    .work-head{
+      opacity: 0;
       transform: translateY(100px);
-      transition: .3s;
+      &.active{
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    .work-head2{
+      opacity: 0;
+      transform: translateY(100px);
       &.active{
         transform: translateY(0);
         opacity: 1;

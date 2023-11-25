@@ -1707,12 +1707,21 @@ body {
   left: -100%;
 }
 .works-box.active .works-heading {
-  opacity: 0.3;
   left: 0;
-  transform: translateY(100px);
-  transition: 0.3s;
 }
-.works-box.active .works-heading.active {
+.works-box.active .work-head {
+  opacity: 0;
+  transform: translateY(100px);
+}
+.works-box.active .work-head.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+.works-box.active .work-head2 {
+  opacity: 0;
+  transform: translateY(100px);
+}
+.works-box.active .work-head2.active {
   transform: translateY(0);
   opacity: 1;
 }
