@@ -160,12 +160,12 @@ $(window).on('load', function () {
    const works_heading = $(".work-head").offset().top;
    const works_heading2 = $(".work-head2").offset().top;
     ScrollTrigger.create({
-        start: `top -${works_heading - 250}`,
+        start: `top -${works_heading - 280}`,
         end: 9999,
         toggleClass: {className: 'active', targets: '.work-head'},
     });
     ScrollTrigger.create({
-        start: `top -${works_heading2 - 250}`,
+        start: `top -${works_heading2 - 280}`,
         end: 9999,
         toggleClass: {className: 'active', targets: '.work-head2'},
     });

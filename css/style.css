@@ -1712,6 +1712,7 @@ body {
 .works-box.active .work-head {
   opacity: 0;
   transform: translateY(100px);
+  transition: 0.4s linear;
 }
 .works-box.active .work-head.active {
   transform: translateY(0);
@@ -1720,6 +1721,7 @@ body {
 .works-box.active .work-head2 {
   opacity: 0;
   transform: translateY(100px);
+  transition: 0.4s linear;
 }
 .works-box.active .work-head2.active {
   transform: translateY(0);
