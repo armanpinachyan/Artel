@@ -1569,6 +1569,7 @@ $transMenu: 0.5s;
           font-size: .8rem;
           line-height: 19px;
         }
+
       }
     }
 
@@ -1705,8 +1706,14 @@ $transMenu: 0.5s;
       left: -100%;
     }
     .works-heading{
-      opacity: 1;
+      opacity: .3;
       left: 0;
+      transform: translateY(100px);
+      transition: .3s;
+      &.active{
+        transform: translateY(0);
+        opacity: 1;
+      }
     }
     .our-work-inner{
       opacity: 0;

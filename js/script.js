@@ -156,6 +156,20 @@ $(window).on('load', function () {
         img.onload = () => console.log('loaded')
     })
     AOS.init();
+
+   const works_heading = $(".works-heading").offset().top;
+   const works_heading2 = $(".works-heading2").offset().top;
+    ScrollTrigger.create({
+        start: `top -${works_heading - 200}`,
+        end: 9999,
+        toggleClass: {className: 'active', targets: '.works-heading'},
+    });
+    ScrollTrigger.create({
+        start: `top -${works_heading2 - 200}`,
+        end: 9999,
+        toggleClass: {className: 'active', targets: '.works_heading2'},
+    });
+
 })
 
 ScrollTrigger.create({

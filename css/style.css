@@ -1707,8 +1707,14 @@ body {
   left: -100%;
 }
 .works-box.active .works-heading {
-  opacity: 1;
+  opacity: 0.3;
   left: 0;
+  transform: translateY(100px);
+  transition: 0.3s;
+}
+.works-box.active .works-heading.active {
+  transform: translateY(0);
+  opacity: 1;
 }
 .works-box.active .our-work-inner {
   opacity: 0;
